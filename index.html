@@ -374,6 +374,17 @@
   .pl-sheet h5{margin:0 0 8px; font-size:13px; font-weight:800; display:flex; justify-content:space-between;} .pl-sheet h5 span{color:var(--muted);}
   .pl-sheet ol{margin:0; padding-left:18px; font-size:12px; line-height:1.55; color:var(--ink);} .pl-sheet li{margin-bottom:4px;} .pl-sheet li small{display:block; color:var(--muted); font-size:11.5px;}
   .pl-home{flex-direction:column; gap:14px;} .pl-home .pl-widget,.pl-home .pl-mock{width:100%; max-width:420px;}
+
+  .pl-scene{position:relative; overflow:hidden; border-radius:18px; background:#EEF1F8; min-height:340px;}
+  .pl-scene .pl-s{position:absolute; border-radius:30px; transform:rotate(-9deg);}
+  .pl-scene .pl-s1{left:10%; top:22%; width:40%; height:66%; background:#b9adf5; opacity:.55;}
+  .pl-scene .pl-s2{left:30%; top:2%; width:42%; height:62%; background:#ffcdb5; opacity:.6;}
+  .pl-scene .pl-screen{position:absolute; left:20%; top:13%; width:118%; max-width:none; height:auto; border-radius:14px; border:1px solid #e3e6ee; box-shadow:0 30px 60px -24px rgba(30,34,60,.35); transform:perspective(2000px) rotateX(10deg) rotateY(-14deg) rotateZ(-9deg); transform-origin:0 0;}
+  .pl-scene .pl-float{position:absolute; left:5%; bottom:9%; width:min(46%,250px); transform:rotate(-9deg); padding:14px 16px; box-shadow:0 20px 40px -16px rgba(91,73,201,.55);}
+  .pl-scene .pl-float b{display:block; height:16px; width:72%; border-radius:8px; background:rgba(255,255,255,.45); margin:10px 0 12px;}
+  .pl-scene .pl-float .pl-pills span{font-size:11px; padding:4px 9px;}
+  .pl-hero{margin:8px 0 72px; height:clamp(340px,46vw,560px);}
+  @media (max-width:720px){ .pl-scene .pl-screen{left:14%; width:150%;} .pl-scene .pl-float{width:58%;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -768,7 +779,7 @@
         </div>
       </div>
       <div class="pt-grid">
-        <div class="pt-cell pl-home" aria-hidden="true"><div class="pl-widget"><small><i></i>Billing limit available</small><b>Rp 4,250,000</b><div class="pl-pills"><span class="r">2 overdue</span><span class="y">3 due soon</span></div></div><div class="pl-mock"><h4>Unpaid bills</h4><div class="pl-bill"><div><span>Bill period 1&ndash;15 Mar</span><b>Rp 1,840,000</b></div><div class="due"><span>Due</span><b>29 Mar</b><br><span class="pl-chip late">Overdue</span></div><span class="pl-pay">Pay</span></div><div class="pl-bill"><div><span>Bill period 16&ndash;31 Mar</span><b>Rp 2,310,000</b></div><div class="due"><span>Due</span><b>Today</b><br><span class="pl-chip warn">Due today</span></div><span class="pl-pay">Pay</span></div><div class="pl-bill"><div><span>Bill period 1&ndash;15 Apr</span><b>Rp 1,275,000</b></div><div class="due"><span>Due</span><b>28 Apr</b><br><span class="pl-chip due">In 9 days</span></div><span class="pl-pay">Pay</span></div></div></div>
+        <div class="pt-cell pl-scene" aria-hidden="true"><div class="pl-s pl-s1"></div><div class="pl-s pl-s2"></div><img class="pl-screen" src="paylater-limit.webp" width="1366" height="928" loading="lazy" alt="Billing limit page, tilted, with all figures hidden"><div class="pl-widget pl-float"><small><i></i>Billing limit available</small><b></b><div class="pl-pills"><span class="r">3 overdue</span><span class="y">2 due soon</span></div></div></div>
         <div class="phone-stack">
           <div class="pl-stat"><b>2,500+</b><span data-i="434">shipments booked on credit</span></div>
           <div class="pl-stat"><b>0</b><span data-i="435">bad debt since launch</span></div>
@@ -1510,6 +1521,7 @@
         <div class="pv-block"><div data-i="22" class="pv-meta-label">Company</div><div class="pv-text">Lion Parcel</div></div>
       </div>
     </div>
+    <div class="pl-scene pl-hero reveal"><div class="pl-s pl-s1"></div><div class="pl-s pl-s2"></div><img class="pl-screen" src="paylater-limit.webp" width="1366" height="928" alt="Billing limit page, tilted, with all figures hidden"><div class="pl-widget pl-float"><small><i></i>Billing limit available</small><b></b><div class="pl-pills"><span class="r">3 overdue</span><span class="y">2 due soon</span></div></div></div>
     <div class="pv-project-intro">
         <div data-i="196" class="pv-meta-label pv-worked p3-sec">Problem</div>
         <div class="p3-rc reveal">
