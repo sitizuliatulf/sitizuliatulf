@@ -448,6 +448,19 @@
   .pl-stat-img{position:absolute; z-index:0; left:56%; top:20%; width:80%; max-width:none; height:auto; border-radius:10px; border:1px solid #e3e6ee; box-shadow:0 18px 36px -18px rgba(30,34,60,.35); transform:perspective(1400px) rotateX(8deg) rotateY(-12deg) rotateZ(-9deg); pointer-events:none;}
   .pl-stat-img.b2{left:56%; top:22%; width:92%;}
   @media (max-width:720px){ .pl-stat b,.pl-stat span{max-width:none;} .pl-stat{min-height:150px; justify-content:flex-start;} .pl-stat-img{left:12%; top:56%; width:150%;} .pl-stat-img.b2{left:12%; top:56%; width:160%;} .pl-stat{min-height:230px;} }
+
+  .vibe-card .vb{position:relative; overflow:hidden; display:block; text-decoration:none; color:inherit;}
+  .vb-win{position:absolute; left:7%; top:9%; width:100%; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 24px 50px -24px rgba(30,34,60,.35); border:1px solid #e3e6ee; transition:transform .35s ease;}
+  .vb-win i{display:flex; gap:5px; padding:8px 10px; background:#f6f7fa; border-bottom:1px solid #eceef3;} .vb-win i b{width:8px; height:8px; border-radius:50%; background:#d9dce4;}
+  .vb-win img{display:block; width:100%; height:auto;}
+  .vb-phone{position:absolute; left:50%; top:10%; width:46%; transform:translateX(-50%); border-radius:26px; overflow:hidden; border:6px solid #1d1f27; box-shadow:0 24px 50px -24px rgba(30,34,60,.45); transition:transform .35s ease;}
+  .vb-phone img{display:block; width:100%; height:auto;}
+  .vb:hover .vb-win{transform:translateY(-6px);} .vb:hover .vb-phone{transform:translateX(-50%) translateY(-6px);}
+  .vb-tag{position:absolute; left:14px; bottom:14px; z-index:2; display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,.94); border:1px solid var(--line); border-radius:999px; padding:7px 13px; font-size:13px; font-weight:700; color:var(--ink); box-shadow:0 8px 20px -10px rgba(30,34,60,.3);}
+  .vb-tag span{color:var(--muted); font-weight:600;}
+  .vibe-card .phone-stack .vb{flex:1 1 0; min-height:0; border-radius:18px; background:#F1F4FB;}
+  .vibe-card .phone-stack .vb + .vb{margin-top:18px;}
+  @media (max-width:720px){ .vibe-card .pt2-panel.vb{height:240px;} .vibe-card .phone-stack .vb{height:220px; flex:1 1 0;} .vibe-card .phone-stack .vb + .vb{margin-top:0;} .vb-tag{font-size:11px; padding:5px 9px; left:8px; bottom:8px;} .vb-tag span{display:none;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -918,6 +931,37 @@
       </div>
       </div>
     </a>
+    <div class="project-showcase vibe-card">
+      <div class="showcase-visual pt-visual">
+      <div class="pt-head">
+        <div class="pt-head-main">
+          <div class="pt-eyebrow"><span class="pt-num">05</span><span data-i="472" class="pt-lab">Side projects &middot; Built with AI</span><i class="pt-line"></i></div>
+          <div data-i="473" class="pt-h">Vibe-coded Apps</div>
+          <p data-i="474" class="pt-d">Exercising product and design thinking beyond the canvas: two consumer web apps I designed and built end to end with AI. Both are live.</p>
+        </div>
+        <div class="pt-meta">
+          <div class="pt-meta-item"><span data-i="475" class="pt-meta-lab">Type</span><span data-i="476" class="pt-meta-val">Web app &middot; Consumers</span></div>
+          <div class="pt-meta-item"><span data-i="477" class="pt-meta-lab">Role</span><span data-i="478" class="pt-meta-val">Design &amp; build</span></div>
+        </div>
+      </div>
+      <div class="pt-grid">
+        <a class="pt2-panel vb" href="https://wordly-belajar.netlify.app/" target="_blank" rel="noopener" aria-label="Open Wordly (opens in a new tab)">
+          <div class="vb-win"><i><b></b><b></b><b></b></i><img src="vibe-wordly.webp" width="2560" height="1600" loading="lazy" alt="Wordly: learn everyday English vocabulary by memorising, writing, and speaking"></div>
+          <span class="vb-tag">Wordly <span data-i="479">&middot; English vocabulary</span> &#8599;</span>
+        </a>
+        <div class="phone-stack">
+          <a class="vb" href="https://selarasa.netlify.app/" target="_blank" rel="noopener" aria-label="Open Selarasa (opens in a new tab)">
+            <div class="vb-win" style="left:-22%; top:12%; width:130%;"><i><b></b><b></b><b></b></i><img src="vibe-selarasa.webp" width="2560" height="1600" loading="lazy" alt="Selarasa: AI personal color assistant that scans your face on device"></div>
+            <span class="vb-tag">Selarasa <span data-i="480">&middot; Personal color AI</span> &#8599;</span>
+          </a>
+          <a class="vb" href="https://wordly-belajar.netlify.app/" target="_blank" rel="noopener" aria-label="Open Wordly on mobile (opens in a new tab)">
+            <div class="vb-phone"><img src="vibe-wordly-mobile.webp" width="1170" height="2532" loading="lazy" alt="Wordly on mobile"></div>
+            <span class="vb-tag">Wordly <span data-i="481">&middot; Mobile</span> &#8599;</span>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
     </div>
     <div class="wk-panel" data-wk-panel="landing" hidden>
     <a href="#landing-qubiql" class="project-showcase">
