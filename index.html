@@ -349,6 +349,31 @@
   .pl-stat b{font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-.02em; color:var(--ink);} .pl-stat span{color:var(--muted); font-weight:600; font-size:14px;}
   .pl-stat + .pl-stat{margin-top:18px;}
   @media (max-width:720px){ .pl-stat + .pl-stat{margin-top:0;} .pl-shot{padding:60px 14px 20px;} }
+
+  .pl-widget{position:relative; overflow:hidden; border-radius:18px; padding:18px 20px; color:#fff; background:linear-gradient(135deg,#7b61e8 0%,#5b49c9 100%); box-shadow:0 18px 34px -18px rgba(91,73,201,.6);}
+  .pl-widget::after{content:""; position:absolute; right:-30px; top:-30px; width:140px; height:140px; border-radius:50%; background:rgba(255,255,255,.1);}
+  .pl-widget small{display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; opacity:.92;}
+  .pl-widget small i{width:18px; height:13px; border:2px solid #fff; border-radius:3px; display:inline-block;}
+  .pl-widget b{display:block; font-size:28px; font-weight:800; letter-spacing:-.02em; margin:4px 0 12px;}
+  .pl-pills{display:flex; gap:8px; flex-wrap:wrap;} .pl-pills span{font-size:12px; font-weight:700; padding:5px 11px; border-radius:999px;}
+  .pl-pills .r{background:#ff4d4f; color:#fff;} .pl-pills .y{background:#ffd666; color:#4a3500;}
+  .pl-sum{display:grid; grid-template-columns:1.2fr 1fr; gap:10px 14px; padding:14px; border:1.5px solid #ffd6c2; border-radius:14px; background:linear-gradient(120deg,#fff 60%,#fff6f1);}
+  .pl-sum div span{display:block; font-size:11px; color:var(--muted);} .pl-sum div b{font-size:14px; font-weight:800;}
+  .pl-sum .big b{font-size:22px;} .pl-sum .big{grid-row:span 3; align-self:center;}
+  .pl-sum .links{grid-column:1/-1; display:flex; justify-content:space-between; border-top:1px solid #ffe4d6; padding-top:9px; font-size:11.5px; font-weight:700; color:#ff5a2d;}
+  .pl-sum .links em{font-style:normal; color:#2f7de1;}
+  .pl-bill{display:grid; grid-template-columns:1fr auto auto; align-items:center; gap:10px; padding:11px 12px; border:1px solid var(--line); border-radius:12px; margin-top:8px; background:#fff;}
+  .pl-bill span{display:block; font-size:11px; color:var(--muted);} .pl-bill b{font-size:13px; font-weight:800;}
+  .pl-bill .due{text-align:center;} .pl-bill .due .pl-chip{display:inline-block; margin-top:3px;}
+  .pl-bill .pl-pay{font-size:12px; font-weight:800; color:#fff; background:#ff5a2d; border-radius:8px; padding:7px 12px;}
+  .pl-chip.late{background:#ffe9e9; color:#d4282f;}
+  .pl-warn{display:flex; gap:10px; padding:11px 12px; border-radius:12px; background:#fff6dc; color:#7a5300; font-size:12px; line-height:1.45;}
+  .pl-warn i{flex-shrink:0; width:18px; height:18px; border-radius:50%; background:#f5a623; color:#fff; font-style:normal; font-weight:800; font-size:12px; display:flex; align-items:center; justify-content:center;}
+  .pl-warn ul{margin:0; padding-left:14px;}
+  .pl-sheet{margin-top:10px; border:1px solid var(--line); border-radius:12px; padding:12px 14px; background:#fff;}
+  .pl-sheet h5{margin:0 0 8px; font-size:13px; font-weight:800; display:flex; justify-content:space-between;} .pl-sheet h5 span{color:var(--muted);}
+  .pl-sheet ol{margin:0; padding-left:18px; font-size:12px; line-height:1.55; color:var(--ink);} .pl-sheet li{margin-bottom:4px;} .pl-sheet li small{display:block; color:var(--muted); font-size:11.5px;}
+  .pl-home{flex-direction:column; gap:14px;} .pl-home .pl-widget,.pl-home .pl-mock{width:100%; max-width:420px;}
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -743,11 +768,7 @@
         </div>
       </div>
       <div class="pt-grid">
-        <div class="pt-cell pl-home" aria-hidden="true"><div class="pl-mock"><h4>Pay Later &middot; Agent credit</h4>
-            <div class="pl-kpis"><div class="pl-kpi"><b>Rp 8.4M</b><span>Outstanding</span></div><div class="pl-kpi"><b>3</b><span>Due this week</span></div><div class="pl-kpi"><b>0</b><span>Overdue</span></div></div>
-            <div class="pl-row"><div>Invoice #PL-1042<small>Due 21 Nov &middot; 38 shipments</small></div><span class="pl-chip due">Due in 3 days</span></div>
-            <div class="pl-row"><div>Invoice #PL-1031<small>Due 14 Nov &middot; 52 shipments</small></div><span class="pl-chip ok">Paid</span></div>
-            <div class="pl-row"><div>Invoice #PL-1027<small>Due 07 Nov &middot; 41 shipments</small></div><span class="pl-chip ok">Paid</span></div></div></div>
+        <div class="pt-cell pl-home" aria-hidden="true"><div class="pl-widget"><small><i></i>Billing limit available</small><b>Rp 4,250,000</b><div class="pl-pills"><span class="r">2 overdue</span><span class="y">3 due soon</span></div></div><div class="pl-mock"><h4>Unpaid bills</h4><div class="pl-bill"><div><span>Bill period 1&ndash;15 Mar</span><b>Rp 1,840,000</b></div><div class="due"><span>Due</span><b>29 Mar</b><br><span class="pl-chip late">Overdue</span></div><span class="pl-pay">Pay</span></div><div class="pl-bill"><div><span>Bill period 16&ndash;31 Mar</span><b>Rp 2,310,000</b></div><div class="due"><span>Due</span><b>Today</b><br><span class="pl-chip warn">Due today</span></div><span class="pl-pay">Pay</span></div><div class="pl-bill"><div><span>Bill period 1&ndash;15 Apr</span><b>Rp 1,275,000</b></div><div class="due"><span>Due</span><b>28 Apr</b><br><span class="pl-chip due">In 9 days</span></div><span class="pl-pay">Pay</span></div></div></div>
         <div class="phone-stack">
           <div class="pl-stat"><b>2,500+</b><span data-i="434">shipments booked on credit</span></div>
           <div class="pl-stat"><b>0</b><span data-i="435">bad debt since launch</span></div>
@@ -1480,11 +1501,11 @@
     <div class="pv-grid">
       <div class="pv-col-main">
         <div data-i="125" class="pv-meta-label">Overview</div>
-        <p data-i="436" class="pv-text">Lion Parcel agents run small shipping counters. To book a shipment, they needed enough prepaid balance first, so a low balance meant turning customers away. The business wanted to let trusted agents book on credit, without taking on bad debt.</p>
-        <p data-i="437" class="pv-text pv-gap">I designed the pay-later system from scratch: how agents get approved, how they book on credit, and how agents and the internal team track what is due.</p>
+        <p data-i="436" class="pv-text">Lion Parcel agents run small shipping counters and paid for every booking from a prepaid balance. The business wanted to let trusted agents book on a billing limit and pay later, without taking on bad debt.</p>
+        <p data-i="437" class="pv-text pv-gap">I designed the pay-later experience from scratch: how agents see and use their limit, how bills and due dates are presented, and how the rules on discounts and late payments are made clear.</p>
       </div>
       <div class="pv-col-side">
-        <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="438" class="pv-text">Product Designer &middot; Agent app &amp; internal tools</div></div>
+        <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="438" class="pv-text">Product Designer &middot; Agent web app</div></div>
         <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div data-i="433" class="pv-text">Logistics &middot; Fintech</div></div>
         <div class="pv-block"><div data-i="22" class="pv-meta-label">Company</div><div class="pv-text">Lion Parcel</div></div>
       </div>
@@ -1492,56 +1513,45 @@
     <div class="pv-project-intro">
         <div data-i="196" class="pv-meta-label pv-worked p3-sec">Problem</div>
         <div class="p3-rc reveal">
-          <div class="p3-rc-item"><span class="p3-rc-n">01</span><div><strong data-i="439">Balance blocks bookings</strong><p data-i="440">Agents had to top up before every booking. When the balance ran out, shipments were delayed or lost.</p></div></div>
-          <div class="p3-rc-item"><span class="p3-rc-n">02</span><div><strong data-i="441">Credit means risk</strong><p data-i="442">Giving credit to agents is only worth it if the company gets paid back. Approval and limits had to be controlled.</p></div></div>
-          <div class="p3-rc-item"><span class="p3-rc-n">03</span><div><strong data-i="443">No view of what is owed</strong><p data-i="444">Without a clear due-date view, agents miss payments and the team chases them manually.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">01</span><div><strong data-i="439">Balance blocks bookings</strong><p data-i="440">Agents had to keep a prepaid balance topped up. A low balance meant they could not book shipments for their customers.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">02</span><div><strong data-i="441">Credit means risk</strong><p data-i="442">Credit only works if agents pay back on time. The rules had to be understood before anything went wrong, not after.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">03</span><div><strong data-i="443">Many bills, many dates</strong><p data-i="444">With bills issued every period, agents needed to see at a glance what is overdue, what is due today, and what comes next.</p></div></div>
         </div>
     </div>
     <div class="pv-project" style="margin-top:56px; margin-bottom:96px;">
       <div class="pv-project-text">
         <div class="pv-sticky">
           <div data-i="85" class="pv-meta-label pv-worked">What I worked on</div>
-          <p data-i="445" class="p3-sub">Approve &rarr; Book &rarr; Pay on time</p>
+          <p data-i="445" class="p3-sub">See limit &rarr; Track bills &rarr; Pay on time</p>
           <ol class="pv-stepper">
             <li class="pv-step active" data-go="1">
-              <div class="pv-step-head"><span class="pv-step-num">01</span><span data-i="446" class="pv-step-title">Approval Flow</span></div>
-              <div class="pv-step-body"><div><p data-i="447" class="pv-step-desc">Designed how agents request pay-later access and how the internal team reviews, approves, and sets a credit limit.</p></div></div>
+              <div class="pv-step-head"><span class="pv-step-num">01</span><span data-i="446" class="pv-step-title">Limit at a Glance</span></div>
+              <div class="pv-step-body"><div><p data-i="447" class="pv-step-desc">A home widget shows the available limit with overdue and due-soon counts. The limit page breaks it down into remaining, used, and total limit, plus the agent&rsquo;s payment scheme.</p></div></div>
             </li>
             <li class="pv-step" data-go="2">
-              <div class="pv-step-head"><span class="pv-step-num">02</span><span data-i="448" class="pv-step-title">Booking on Credit</span></div>
-              <div class="pv-step-body"><div><p data-i="449" class="pv-step-desc">Added pay later as a payment option at booking, with the remaining limit visible so agents know what they can still book.</p></div></div>
+              <div class="pv-step-head"><span class="pv-step-num">02</span><span data-i="448" class="pv-step-title">Bills by Urgency</span></div>
+              <div class="pv-step-body"><div><p data-i="449" class="pv-step-desc">Each bill shows its period, amount, due date, discount earned, and status. Colour-coded labels (overdue, due today, days left) tell agents what to pay first.</p></div></div>
             </li>
             <li class="pv-step" data-go="3">
-              <div class="pv-step-head"><span class="pv-step-num">03</span><span data-i="450" class="pv-step-title">Due-Date Dashboard</span></div>
-              <div class="pv-step-body"><div><p data-i="451" class="pv-step-desc">Designed a dashboard showing outstanding amounts, upcoming due dates, and payment status, so payments are made on time.</p></div></div>
+              <div class="pv-step-head"><span class="pv-step-num">03</span><span data-i="450" class="pv-step-title">Rules Made Clear</span></div>
+              <div class="pv-step-body"><div><p data-i="451" class="pv-step-desc">Billing schemes, on-time discounts, and late-payment consequences are explained in plain terms, both above the bill list and in the terms sheet.</p></div></div>
             </li>
           </ol>
           <div class="dd-card reveal">
             <span data-i="115" class="dd-badge"><i></i>Design decision</span>
-            <h3 data-i="452" class="dd-title">Show the limit before agents need it</h3>
-            <p data-i="453" class="dd-desc">The remaining credit limit appears right at the payment step, not in a separate menu. Agents decide on the spot, and nobody books more than they can pay back.</p>
+            <h3 data-i="452" class="dd-title">Rules up front, not in the fine print</h3>
+            <p data-i="453" class="dd-desc">The reward for paying early and the cost of paying late sit right above the bills, where agents decide what to pay. Pairing a discount with a clear consequence encourages on-time payment.</p>
           </div>
         </div>
       </div>
       <div class="pv-project-media">
-        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="1"><span data-i="446" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Approval Flow</span>
-          <div class="pl-mock"><h4>Pay Later requests</h4>
-            <div class="pl-row"><div>Agent POS Cempaka Putih<small>Requested limit Rp 10M &middot; 14 months active</small></div><span class="pl-chip warn">Review</span></div>
-            <div class="pl-row"><div>Agent POS Tebet Barat<small>Approved limit Rp 7.5M</small></div><span class="pl-chip ok">Approved</span></div>
-            <div class="pl-row"><div>Agent POS Bekasi Timur<small>Approved limit Rp 5M</small></div><span class="pl-chip ok">Approved</span></div>
-            <div class="pl-btn">Review request</div></div></div>
-        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="2"><span data-i="448" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Booking on Credit</span>
-          <div class="pl-mock"><h4>Payment method</h4>
-            <div class="pl-opt"><i></i><div>Balance<small>Rp 85,000 &middot; not enough for this booking</small></div></div>
-            <div class="pl-opt sel"><i></i><div>Pay Later<small>Remaining limit Rp 6.2M of Rp 10M</small><div class="pl-bar"><b style="width:62%"></b></div></div></div>
-            <div class="pl-btn">Book shipment &middot; Rp 148,000</div></div></div>
-        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="3"><span data-i="450" class="pv-live-badge b-violet"><span class="pv-live-dot"></span>Due-Date Dashboard</span>
-          <div class="pl-mock"><h4>Pay Later &middot; Agent credit</h4>
-            <div class="pl-kpis"><div class="pl-kpi"><b>Rp 8.4M</b><span>Outstanding</span></div><div class="pl-kpi"><b>3</b><span>Due this week</span></div><div class="pl-kpi"><b>0</b><span>Overdue</span></div></div>
-            <div class="pl-row"><div>Invoice #PL-1042<small>Due 21 Nov &middot; 38 shipments</small></div><span class="pl-chip due">Due in 3 days</span></div>
-            <div class="pl-row"><div>Invoice #PL-1031<small>Due 14 Nov &middot; 52 shipments</small></div><span class="pl-chip ok">Paid</span></div>
-            <div class="pl-row"><div>Invoice #PL-1027<small>Due 07 Nov &middot; 41 shipments</small></div><span class="pl-chip ok">Paid</span></div></div></div>
-        <p data-i="454" class="pl-note">Illustrative recreation. Real screens and data are confidential.</p>
+        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="1"><span data-i="446" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Limit at a Glance</span>
+          <div class="pl-mock" style="background:#F6F8FC;"><div class="pl-widget"><small><i></i>Billing limit available</small><b>Rp 4,250,000</b><div class="pl-pills"><span class="r">2 overdue</span><span class="y">3 due soon</span></div></div><div style="height:12px"></div><div class="pl-sum"><div class="big"><span>Remaining limit</span><b>Rp 4,250,000</b></div><div><span>Payment scheme</span><b>Monthly</b></div><div><span>Total limit</span><b>Rp 25,000,000</b></div><div><span>Limit used</span><b>Rp 20,750,000</b></div><div class="links">Limit &amp; scheme history &rsaquo;<em>Terms</em></div></div></div></div>
+        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="2"><span data-i="448" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Bills by Urgency</span>
+          <div class="pl-mock"><h4>Unpaid bills</h4><div class="pl-bill"><div><span>Bill period 1&ndash;15 Mar</span><b>Rp 1,840,000</b></div><div class="due"><span>Due</span><b>29 Mar</b><br><span class="pl-chip late">Overdue</span></div><span class="pl-pay">Pay</span></div><div class="pl-bill"><div><span>Bill period 16&ndash;31 Mar</span><b>Rp 2,310,000</b></div><div class="due"><span>Due</span><b>Today</b><br><span class="pl-chip warn">Due today</span></div><span class="pl-pay">Pay</span></div><div class="pl-bill"><div><span>Bill period 1&ndash;15 Apr</span><b>Rp 1,275,000</b></div><div class="due"><span>Due</span><b>28 Apr</b><br><span class="pl-chip due">In 9 days</span></div><span class="pl-pay">Pay</span></div></div></div>
+        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="3"><span data-i="450" class="pv-live-badge b-violet"><span class="pv-live-dot"></span>Rules Made Clear</span>
+          <div class="pl-mock"><div class="pl-warn"><i>!</i><ul><li>Pay before the due date to get a booking discount.</li><li>Late payments are deducted from your balance and the limit is frozen.</li></ul></div><div class="pl-sheet"><h5>Billing limit terms <span>&times;</span></h5><ol><li>Two billing schemes<small>Bi-weekly or monthly, set per agent</small></li><li>On-time discount<small>A booking discount when the bill is paid before its due date</small></li><li>Clear due date<small>Every bill has a fixed payment window after it is issued</small></li><li>Late payment<small>Balance is deducted and the limit is frozen until paid</small></li></ol></div></div></div>
+        <p data-i="454" class="pl-note">Illustrative recreation. Real screens, figures, and terms are confidential.</p>
       </div>
     </div>
     <div class="p3-outcome">
@@ -1549,7 +1559,7 @@
         <div data-i="94" class="pv-worked">Impact</div>
         <div data-i="455" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>2,500+ shipments booked on credit</div>
         <div data-i="456" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>Zero bad debt since launch</div>
-        <div data-i="457" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>Designed from scratch: approval, booking, and due-date tracking</div>
+        <div data-i="457" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>Designed from scratch: limit, billing, and payment rules</div>
       </div>
     </div>
   </div>
