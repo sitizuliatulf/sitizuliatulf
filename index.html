@@ -494,6 +494,19 @@
   .vc-sheets img:nth-child(2){transform:translateY(-4%);}
   .vc-cap{position:absolute; left:18px; top:16px; font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--muted);}
   @media (max-width:900px){ .vc-sheets{gap:3%; padding:14% 4% 6%;} }
+
+  footer.ft{border-top:1px solid var(--line); padding:44px 0 calc(36px + env(safe-area-inset-bottom,0px)); font-family:ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;}
+  footer.ft .ft-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px 36px; align-items:start;}
+  .ft-id{display:flex; gap:14px; font-size:12.5px; line-height:1.7; letter-spacing:.04em; color:var(--ink);}
+  .ft-dot{width:11px; height:11px; border-radius:50%; background:var(--accent); flex-shrink:0; margin-top:4px;}
+  .ft-col{display:flex; flex-direction:column; border-top:1px solid var(--ink);}
+  .ft-row{display:flex; align-items:center; justify-content:space-between; padding:13px 6px; border-bottom:1px solid var(--line); color:var(--ink); text-decoration:none; font-size:15px; transition:color .2s ease, padding .2s ease;}
+  .ft-row i{font-style:normal; font-size:14px; transition:transform .2s ease;}
+  .ft-row:hover{color:var(--accent); padding-left:12px;}
+  .ft-row:hover i{transform:translate(2px,-2px);}
+  .ft-copy{grid-column:1/-1; font-size:12px; color:var(--muted); letter-spacing:.04em;}
+  @media (max-width:860px){ footer.ft .ft-grid{grid-template-columns:1fr 1fr;} .ft-id{grid-column:1/-1;} }
+  @media (max-width:520px){ footer.ft .ft-grid{grid-template-columns:1fr; gap:0;} .ft-id{margin-bottom:24px;} .ft-col + .ft-col{border-top:none;} .ft-copy{margin-top:24px;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -1788,10 +1801,12 @@
   </div>
 </div>
 
-<footer>
-  <div class="wrap">
-    <span>© 2026 Siti Zuliatul Faidah</span>
-    <div class="socials"><a href="https://www.linkedin.com/in/siti-zuliatul-faidah/" target="_blank" rel="noopener">LinkedIn</a><a href="https://dribbble.com/sitizuliatulf" target="_blank" rel="noopener">Dribbble</a><a href="https://www.behance.net/sitizuliatulfaidah" target="_blank" rel="noopener">Behance</a><a href="mailto:sitizuliatulf@gmail.com">Email</a></div>
+<footer class="ft">
+  <div class="wrap ft-grid">
+    <div class="ft-id"><i class="ft-dot" aria-hidden="true"></i><div>SITI ZULIATUL FAIDAH<br><span data-i="500">PRODUCT DESIGNER</span><br>JAKARTA, ID<br><span id="ftTime">--:-- GMT+7</span></div></div>
+    <nav class="ft-col" aria-label="Profiles"><a class="ft-row" href="https://www.linkedin.com/in/siti-zuliatul-faidah/" target="_blank" rel="noopener"><span>LinkedIn</span><i aria-hidden="true">&#8599;</i></a><a class="ft-row" href="https://dribbble.com/sitizuliatulf" target="_blank" rel="noopener"><span>Dribbble</span><i aria-hidden="true">&#8599;</i></a><a class="ft-row" href="https://www.behance.net/sitizuliatulfaidah" target="_blank" rel="noopener"><span>Behance</span><i aria-hidden="true">&#8599;</i></a></nav>
+    <nav class="ft-col" aria-label="More"><a class="ft-row" href="mailto:sitizuliatulf@gmail.com"><span data-i="501">Get in touch</span><i aria-hidden="true">&#8599;</i></a><a class="ft-row" href="https://drive.google.com/file/d/1mY9ixdTFrk4eNBCbZgE059HkmoH6mTON/view?usp=sharing" target="_blank" rel="noopener"><span data-i="420">Download CV</span><i aria-hidden="true">&#8599;</i></a><a class="ft-row" href="#top"><span data-i="502">Back to top</span><i aria-hidden="true">&#8593;</i></a></nav>
+    <div class="ft-copy">&copy; 2026 Siti Zuliatul Faidah</div>
   </div>
 </footer>
 
@@ -2295,5 +2310,10 @@
 })();
 </script>
 <script src="i18n.js"></script>
+<script>
+(function(){var el=document.getElementById('ftTime'); if(!el) return;
+function tick(){try{el.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Jakarta'}).format(new Date())+' GMT+7';}catch(e){}}
+tick(); setInterval(tick,30000);})();
+</script>
 </body>
 </html>
