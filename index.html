@@ -323,6 +323,32 @@
   @media (prefers-reduced-motion:reduce){ #pvShotMain .pv-scroll-track{animation:none;} }
   .pv-shot-chat{background:#F1F4FB; aspect-ratio:16/9; display:flex; justify-content:center; align-items:flex-end; gap:56px; padding:48px 32px 0; overflow:hidden;}
   .tk-flow{background:#F1F4FB; padding:72px 32px 36px;} .tk-flow ol{list-style:none; margin:0; padding:0; display:grid; gap:14px;} .tk-flow li{background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px 20px; display:grid; grid-template-columns:auto 1fr; column-gap:14px; row-gap:2px;} .tk-flow .tk-n{grid-row:span 2; font-weight:800; color:#ff5a2d;} .tk-flow b{color:var(--ink);} .tk-flow li>span:last-child{color:var(--muted); font-size:14px;}
+
+  /* Pay-later case study */
+  .pl-mock{background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; font-size:13px; color:var(--ink); box-shadow:0 14px 30px -18px rgba(23,21,18,.25);}
+  .pl-mock h4{margin:0 0 10px; font-size:13px; font-weight:800;}
+  .pl-row{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 0; border-top:1px solid var(--line);}
+  .pl-row:first-of-type{border-top:none;}
+  .pl-row small{display:block; color:var(--muted); font-size:11.5px; margin-top:2px;}
+  .pl-chip{flex-shrink:0; font-size:11px; font-weight:800; padding:4px 9px; border-radius:999px; background:#eef1f7; color:#4a5068;}
+  .pl-chip.ok{background:#e3f7ef; color:#12855b;} .pl-chip.warn{background:#fff2ea; color:#d9481c;} .pl-chip.due{background:#fff6dc; color:#9a6a00;}
+  .pl-kpis{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-bottom:12px;}
+  .pl-kpi{background:#F6F8FC; border-radius:12px; padding:10px;} .pl-kpi b{display:block; font-size:16px; font-weight:800;} .pl-kpi span{font-size:11px; color:var(--muted);}
+  .pl-opt{display:flex; align-items:center; gap:10px; padding:12px; border:1.5px solid var(--line); border-radius:12px; margin-top:8px;}
+  .pl-opt.sel{border-color:#ff5a2d; background:#fff8f4;}
+  .pl-opt i{width:16px; height:16px; border-radius:50%; border:2px solid #c9cdd8; flex-shrink:0;} .pl-opt.sel i{border:5px solid #ff5a2d;}
+  .pl-opt div{flex:1;} .pl-opt small{display:block; color:var(--muted); font-size:11.5px;}
+  .pl-bar{height:6px; border-radius:6px; background:#eef1f7; overflow:hidden; margin-top:6px;} .pl-bar b{display:block; height:100%; background:#ff5a2d; border-radius:6px;}
+  .pl-btn{margin-top:12px; text-align:center; background:#ff5a2d; color:#fff; font-weight:800; border-radius:10px; padding:10px;}
+  .pl-shot{background:#F1F4FB; padding:66px 28px 30px; display:flex; justify-content:center;}
+  .pl-shot .pl-mock{width:100%; max-width:440px;}
+  .pl-note{font-size:12px; color:var(--muted); margin:10px 0 0;}
+  .pl-home{display:flex; align-items:center; justify-content:center; padding:24px;}
+  .pl-home .pl-mock{width:100%; max-width:420px;}
+  .pl-stat{flex:1 1 0; display:flex; flex-direction:column; justify-content:center; padding:20px 22px; border-radius:18px; background:#F1F4FB;}
+  .pl-stat b{font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-.02em; color:var(--ink);} .pl-stat span{color:var(--muted); font-weight:600; font-size:14px;}
+  .pl-stat + .pl-stat{margin-top:18px;}
+  @media (max-width:720px){ .pl-stat + .pl-stat{margin-top:0;} .pl-shot{padding:60px 14px 20px;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -697,6 +723,39 @@
       </div>
     </a>
 
+    <a href="#project-paylater" class="project-showcase">
+      <div class="showcase-visual pt-visual">
+        <div class="showcase-overlay">
+          <div class="vp-circle">
+            <span data-i="17" class="vp-line">View <span class="vp-arrow">↗</span></span>
+            <span data-i="18" class="vp-line">Project</span>
+          </div>
+        </div>
+      <div class="pt-head">
+        <div class="pt-head-main">
+          <div class="pt-eyebrow"><span class="pt-num">02</span><span data-i="430" class="pt-lab">Fintech &middot; B2B payments</span><i class="pt-line"></i></div>
+          <div data-i="431" class="pt-h">Agent Pay Later: Booking Now, Paying on Terms</div>
+          <p data-i="432" class="pt-d">Built a credit system from scratch so agents can keep booking shipments without topping up first. 2,500+ shipments on credit, zero bad debt.</p>
+        </div>
+        <div class="pt-meta">
+          <div class="pt-meta-item"><span data-i="22" class="pt-meta-lab">Company</span><span class="pt-meta-val">Lion Parcel</span></div>
+          <div class="pt-meta-item"><span data-i="24" class="pt-meta-lab">Industry</span><span data-i="433" class="pt-meta-val">Logistics &middot; Fintech</span></div>
+        </div>
+      </div>
+      <div class="pt-grid">
+        <div class="pt-cell pl-home" aria-hidden="true"><div class="pl-mock"><h4>Pay Later &middot; Agent credit</h4>
+            <div class="pl-kpis"><div class="pl-kpi"><b>Rp 8.4M</b><span>Outstanding</span></div><div class="pl-kpi"><b>3</b><span>Due this week</span></div><div class="pl-kpi"><b>0</b><span>Overdue</span></div></div>
+            <div class="pl-row"><div>Invoice #PL-1042<small>Due 21 Nov &middot; 38 shipments</small></div><span class="pl-chip due">Due in 3 days</span></div>
+            <div class="pl-row"><div>Invoice #PL-1031<small>Due 14 Nov &middot; 52 shipments</small></div><span class="pl-chip ok">Paid</span></div>
+            <div class="pl-row"><div>Invoice #PL-1027<small>Due 07 Nov &middot; 41 shipments</small></div><span class="pl-chip ok">Paid</span></div></div></div>
+        <div class="phone-stack">
+          <div class="pl-stat"><b>2,500+</b><span data-i="434">shipments booked on credit</span></div>
+          <div class="pl-stat"><b>0</b><span data-i="435">bad debt since launch</span></div>
+        </div>
+      </div>
+      </div>
+    </a>
+
     <a href="#project-2" class="project-showcase">
       <div class="showcase-visual pt-visual">
         <div class="showcase-overlay">
@@ -707,7 +766,7 @@
         </div>
       <div class="pt-head">
         <div class="pt-head-main">
-          <div class="pt-eyebrow"><span class="pt-num">02</span><span data-i="34" class="pt-lab">AI product</span><i class="pt-line"></i></div>
+          <div class="pt-eyebrow"><span class="pt-num">03</span><span data-i="34" class="pt-lab">AI product</span><i class="pt-line"></i></div>
           <div data-i="35" class="pt-h">Qubio AI Productivity Experience</div>
           <p data-i="36" class="pt-d">Building an AI productivity experience is more than designing a chatbot.</p>
         </div>
@@ -736,7 +795,7 @@
         </div>
         <div class="pt-head">
         <div class="pt-head-main">
-          <div class="pt-eyebrow"><span class="pt-num">03</span><span data-i="39" class="pt-lab">E-commerce app &amp; Supplier web</span><i class="pt-line"></i></div>
+          <div class="pt-eyebrow"><span class="pt-num">04</span><span data-i="39" class="pt-lab">E-commerce app &amp; Supplier web</span><i class="pt-line"></i></div>
           <div data-i="40" class="pt-h">Tokodistributor - Premium Reseller App &amp; TikTok Seller Integration</div>
           <p data-i="41" class="pt-d">Helping resellers discover Premium benefits (+20% sign-ups in the first month), and connecting supplier stock to TikTok Seller.</p>
         </div>
@@ -1413,6 +1472,89 @@
   </div>
 </div>
 
+<div id="paylaterView" class="project3-view" style="display:none;">
+  <div class="pv-topbar wrap"><a data-i="154" href="#top" class="back-link">&larr; Back</a></div>
+  <div class="wrap">
+    <div class="pv-label">Lion Parcel</div>
+    <h1 data-i="431" class="pv-title">Agent Pay Later: Booking Now, Paying on Terms</h1>
+    <div class="pv-grid">
+      <div class="pv-col-main">
+        <div data-i="125" class="pv-meta-label">Overview</div>
+        <p data-i="436" class="pv-text">Lion Parcel agents run small shipping counters. To book a shipment, they needed enough prepaid balance first, so a low balance meant turning customers away. The business wanted to let trusted agents book on credit, without taking on bad debt.</p>
+        <p data-i="437" class="pv-text pv-gap">I designed the pay-later system from scratch: how agents get approved, how they book on credit, and how agents and the internal team track what is due.</p>
+      </div>
+      <div class="pv-col-side">
+        <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="438" class="pv-text">Product Designer &middot; Agent app &amp; internal tools</div></div>
+        <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div data-i="433" class="pv-text">Logistics &middot; Fintech</div></div>
+        <div class="pv-block"><div data-i="22" class="pv-meta-label">Company</div><div class="pv-text">Lion Parcel</div></div>
+      </div>
+    </div>
+    <div class="pv-project-intro">
+        <div data-i="196" class="pv-meta-label pv-worked p3-sec">Problem</div>
+        <div class="p3-rc reveal">
+          <div class="p3-rc-item"><span class="p3-rc-n">01</span><div><strong data-i="439">Balance blocks bookings</strong><p data-i="440">Agents had to top up before every booking. When the balance ran out, shipments were delayed or lost.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">02</span><div><strong data-i="441">Credit means risk</strong><p data-i="442">Giving credit to agents is only worth it if the company gets paid back. Approval and limits had to be controlled.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">03</span><div><strong data-i="443">No view of what is owed</strong><p data-i="444">Without a clear due-date view, agents miss payments and the team chases them manually.</p></div></div>
+        </div>
+    </div>
+    <div class="pv-project" style="margin-top:56px; margin-bottom:96px;">
+      <div class="pv-project-text">
+        <div class="pv-sticky">
+          <div data-i="85" class="pv-meta-label pv-worked">What I worked on</div>
+          <p data-i="445" class="p3-sub">Approve &rarr; Book &rarr; Pay on time</p>
+          <ol class="pv-stepper">
+            <li class="pv-step active" data-go="1">
+              <div class="pv-step-head"><span class="pv-step-num">01</span><span data-i="446" class="pv-step-title">Approval Flow</span></div>
+              <div class="pv-step-body"><div><p data-i="447" class="pv-step-desc">Designed how agents request pay-later access and how the internal team reviews, approves, and sets a credit limit.</p></div></div>
+            </li>
+            <li class="pv-step" data-go="2">
+              <div class="pv-step-head"><span class="pv-step-num">02</span><span data-i="448" class="pv-step-title">Booking on Credit</span></div>
+              <div class="pv-step-body"><div><p data-i="449" class="pv-step-desc">Added pay later as a payment option at booking, with the remaining limit visible so agents know what they can still book.</p></div></div>
+            </li>
+            <li class="pv-step" data-go="3">
+              <div class="pv-step-head"><span class="pv-step-num">03</span><span data-i="450" class="pv-step-title">Due-Date Dashboard</span></div>
+              <div class="pv-step-body"><div><p data-i="451" class="pv-step-desc">Designed a dashboard showing outstanding amounts, upcoming due dates, and payment status, so payments are made on time.</p></div></div>
+            </li>
+          </ol>
+          <div class="dd-card reveal">
+            <span data-i="115" class="dd-badge"><i></i>Design decision</span>
+            <h3 data-i="452" class="dd-title">Show the limit before agents need it</h3>
+            <p data-i="453" class="dd-desc">The remaining credit limit appears right at the payment step, not in a separate menu. Agents decide on the spot, and nobody books more than they can pay back.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pv-project-media">
+        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="1"><span data-i="446" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Approval Flow</span>
+          <div class="pl-mock"><h4>Pay Later requests</h4>
+            <div class="pl-row"><div>Agent POS Cempaka Putih<small>Requested limit Rp 10M &middot; 14 months active</small></div><span class="pl-chip warn">Review</span></div>
+            <div class="pl-row"><div>Agent POS Tebet Barat<small>Approved limit Rp 7.5M</small></div><span class="pl-chip ok">Approved</span></div>
+            <div class="pl-row"><div>Agent POS Bekasi Timur<small>Approved limit Rp 5M</small></div><span class="pl-chip ok">Approved</span></div>
+            <div class="pl-btn">Review request</div></div></div>
+        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="2"><span data-i="448" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Booking on Credit</span>
+          <div class="pl-mock"><h4>Payment method</h4>
+            <div class="pl-opt"><i></i><div>Balance<small>Rp 85,000 &middot; not enough for this booking</small></div></div>
+            <div class="pl-opt sel"><i></i><div>Pay Later<small>Remaining limit Rp 6.2M of Rp 10M</small><div class="pl-bar"><b style="width:62%"></b></div></div></div>
+            <div class="pl-btn">Book shipment &middot; Rp 148,000</div></div></div>
+        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="3"><span data-i="450" class="pv-live-badge b-violet"><span class="pv-live-dot"></span>Due-Date Dashboard</span>
+          <div class="pl-mock"><h4>Pay Later &middot; Agent credit</h4>
+            <div class="pl-kpis"><div class="pl-kpi"><b>Rp 8.4M</b><span>Outstanding</span></div><div class="pl-kpi"><b>3</b><span>Due this week</span></div><div class="pl-kpi"><b>0</b><span>Overdue</span></div></div>
+            <div class="pl-row"><div>Invoice #PL-1042<small>Due 21 Nov &middot; 38 shipments</small></div><span class="pl-chip due">Due in 3 days</span></div>
+            <div class="pl-row"><div>Invoice #PL-1031<small>Due 14 Nov &middot; 52 shipments</small></div><span class="pl-chip ok">Paid</span></div>
+            <div class="pl-row"><div>Invoice #PL-1027<small>Due 07 Nov &middot; 41 shipments</small></div><span class="pl-chip ok">Paid</span></div></div></div>
+        <p data-i="454" class="pl-note">Illustrative recreation. Real screens and data are confidential.</p>
+      </div>
+    </div>
+    <div class="p3-outcome">
+      <div class="pv-impact p3-impact reveal" style="margin-top:0;">
+        <div data-i="94" class="pv-worked">Impact</div>
+        <div data-i="455" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>2,500+ shipments booked on credit</div>
+        <div data-i="456" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>Zero bad debt since launch</div>
+        <div data-i="457" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>Designed from scratch: approval, booking, and due-date tracking</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <span>© 2026 Siti Zuliatul Faidah</span>
@@ -1457,8 +1599,9 @@
     if(navExp){ navExp.classList.toggle('active', isExp); if(isExp){ navExp.setAttribute('aria-current', 'page'); } else { navExp.removeAttribute('aria-current'); } }
   }
   function route(){
-    var hash = location.hash, isProject = hash === '#project', isExp = hash === '#experience', isP3 = hash === '#project-3', isP2 = hash === '#project-2', isLQ = hash === '#landing-qubio', isLM = hash === '#landing-menu', isLQL = hash === '#landing-qubiql';
-    homeView.style.display = (isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL) ? 'none' : '';
+    var hash = location.hash, isProject = hash === '#project', isExp = hash === '#experience', isP3 = hash === '#project-3', isP2 = hash === '#project-2', isLQ = hash === '#landing-qubio', isLM = hash === '#landing-menu', isLQL = hash === '#landing-qubiql', isPL = hash === '#project-paylater';
+    homeView.style.display = (isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL || isPL) ? 'none' : '';
+    var plView = document.getElementById('paylaterView'); if(plView){ plView.style.display = isPL ? '' : 'none'; }
     var lqlView = document.getElementById('landingQubiqlView'); if(lqlView){ lqlView.style.display = isLQL ? '' : 'none'; }
     var lmView = document.getElementById('landingMenuView'); if(lmView){ lmView.style.display = isLM ? '' : 'none'; }
     var lqView = document.getElementById('landingQubioView'); if(lqView){ lqView.style.display = isLQ ? '' : 'none'; }
@@ -1467,7 +1610,7 @@
     if(project3View){ project3View.style.display = isP3 ? '' : 'none'; }
     if(project2View){ project2View.style.display = isP2 ? '' : 'none'; }
     setNav(isExp);
-    if(isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL){
+    if(isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL || isPL){
       window.scrollTo(0,0);
     } else {
       var id = location.hash.slice(1);
