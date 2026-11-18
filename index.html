@@ -53,6 +53,7 @@
   .hero-eyebrow{font-size:13px; font-weight:800; letter-spacing:.3em; text-transform:uppercase; color:var(--accent); margin-bottom:22px;}
   .hero .hero-title{font-size:clamp(30px,3.7vw,50px); font-weight:800; line-height:1.07; letter-spacing:-.025em; color:var(--ink);}
   .hero-title .grad{background:linear-gradient(90deg,#ffb89f 0%,#ff7a4d 42%,#ff5a2d 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;}
+  .hero-spec{margin:2px 0 20px; font-size:clamp(16px,2vw,20px); font-weight:700; color:var(--muted); letter-spacing:.01em;}
   .role-rotator{display:inline-grid; vertical-align:top; margin-bottom:-.16em;}
   .role-rotator .role-item{font-size:inherit; font-weight:inherit; line-height:inherit; margin:0; grid-area:1/1; justify-self:start; width:max-content; white-space:nowrap; padding-bottom:.16em; opacity:0; transform:translateY(.3em); will-change:transform,opacity;}
   .role-rotator .role-item.is-active{opacity:1; transform:none; transition:opacity .45s ease .12s, transform .55s cubic-bezier(.22,1,.36,1) .12s;}
@@ -321,6 +322,7 @@
   @keyframes pvScrollUp{0%{transform:translateY(0);} 12%{transform:translateY(0);} 88%{transform:translateY(-253px);} 100%{transform:translateY(-253px);}}
   @media (prefers-reduced-motion:reduce){ #pvShotMain .pv-scroll-track{animation:none;} }
   .pv-shot-chat{background:#F1F4FB; aspect-ratio:16/9; display:flex; justify-content:center; align-items:flex-end; gap:56px; padding:48px 32px 0; overflow:hidden;}
+  .tk-flow{background:#F1F4FB; padding:72px 32px 36px;} .tk-flow ol{list-style:none; margin:0; padding:0; display:grid; gap:14px;} .tk-flow li{background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px 20px; display:grid; grid-template-columns:auto 1fr; column-gap:14px; row-gap:2px;} .tk-flow .tk-n{grid-row:span 2; font-weight:800; color:#ff5a2d;} .tk-flow b{color:var(--ink);} .tk-flow li>span:last-child{color:var(--muted); font-size:14px;}
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -613,7 +615,8 @@
     <div class="hero-grid">
       <div class="hero-copy">
         <div data-i="4" class="hs-badge"><i class="hs-dot"></i>Available for work</div>
-        <h1 class="hero-title">Siti Zuliatul Faidah<br><span class="role-rotator"><span class="role-item grad is-active">Product Designer.</span><span class="role-item grad" aria-hidden="true">UI/UX Designer.</span><span class="role-item grad" aria-hidden="true">Interaction Designer.</span><span class="role-item grad" aria-hidden="true">UX Researcher.</span></span></h1>
+        <h1 class="hero-title">Siti Zuliatul Faidah<br><span class="role-rotator"><span class="role-item grad is-active">Product Designer.</span></span></h1>
+        <p data-i="422" class="hero-spec">Logistics, Fintech &amp; B2B Tools</p>
         <ul class="hs-list">
           <li><i class="hs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span data-i="6">6 years of experience designing <strong>complex digital products</strong> across AI, logistics, e-commerce, and B2B platforms</span></li>
           <li><i class="hs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span data-i="7">Skilled in turning complex business requirements into <strong>intuitive, user-centered experiences</strong></span></li>
@@ -680,7 +683,7 @@
             <circle class="nav-ripple" id="navRipple" cx="237" cy="568" r="26" fill="#fff"/>
             <g transform="translate(169 121)"><rect id="navChipBg" x="-82" y="-10.5" width="164" height="21" rx="10.5" fill="#fff" stroke="#dcdfe6" stroke-width="1"/><text id="navChipTxt" y="4" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1d2030" font-family="Manrope,Arial,sans-serif">Siap menavigasi</text></g>
           </svg></div></div>
-              <div class="pt-card"><i class="pt-ic">&#8600;</i><div><b data-i="26">~40% fewer &ldquo;address not found&rdquo;</b><span data-i="27">Route Planning</span></div></div>
+              <div class="pt-card"><i class="pt-ic">&#8600;</i><div><b data-i="26">47% fewer &ldquo;address not found&rdquo;</b><span data-i="27">Route Planning</span></div></div>
               <div class="pt-card"><i class="pt-ic">&#8600;</i><div><b data-i="28">37% fewer cancelled pickups</b><span data-i="29">Route Visibility</span></div></div>
               <div class="pt-card"><i class="pt-ic">&#9635;</i><div><b data-i="30">6 ways to order tasks</b><span data-i="31">Task Ordering</span></div></div>
               <div class="pt-card"><i class="pt-ic">&#9635;</i><div><b data-i="32">3 case studies</b><span data-i="33">Driver App &amp; Shipment Booking</span></div></div>
@@ -735,7 +738,7 @@
         <div class="pt-head-main">
           <div class="pt-eyebrow"><span class="pt-num">03</span><span data-i="39" class="pt-lab">E-commerce app &amp; Supplier web</span><i class="pt-line"></i></div>
           <div data-i="40" class="pt-h">Tokodistributor - Premium Reseller App &amp; TikTok Seller Integration</div>
-          <p data-i="41" class="pt-d">Add a short description of this project here.</p>
+          <p data-i="41" class="pt-d">Helping resellers discover Premium benefits (+20% sign-ups in the first month), and connecting supplier stock to TikTok Seller.</p>
         </div>
         <div class="pt-meta">
           <div class="pt-meta-item"><span data-i="22" class="pt-meta-lab">Company</span><span class="pt-meta-val">Tokodistributor</span></div>
@@ -844,7 +847,7 @@
   <div class="wrap">
     <h2 data-i="380" style="font-size:clamp(30px,5vw,48px); font-weight:800; max-width:640px; margin:0 auto 20px;">Got an interesting idea to build together?</h2>
     <p data-i="381" style="color:var(--muted); margin-bottom:28px;">Feel free to talk it through first &mdash; a cup of coffee is usually enough to get started.</p>
-    <a data-i="382" class="btn" href="#" style="padding:14px 28px; font-size:15px;">Schedule a Call</a>
+    <a data-i="382" class="btn" href="mailto:sitizuliatulf@gmail.com?subject=Let%27s%20talk%20-%20Product%20Designer" style="padding:14px 28px; font-size:15px;">Get in Touch</a>
   </div>
 </section>
 
@@ -1072,6 +1075,8 @@
       <div class="p3-impactrow" style="grid-column:1 / -1;">
         <div data-i="94" class="pv-meta-label pv-worked p3-sec" style="margin-top:0;">Impact</div>
         <div class="p3-proc p3-two reveal">
+          <div class="p3-rc-item"><span class="p3-rc-n">&#8599;</span><div><p data-i="424" style="margin:0; color:var(--ink);"><strong>Booking time cut from 80s to under 50s</strong> per shipment (target 60s), with OCR auto-fill and repeat-shipment shortcuts</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">&#8599;</span><div><p data-i="425" style="margin:0; color:var(--ink);"><strong>Booking errors down 20%</strong> after separating domestic and international forms</p></div></div>
           <div class="p3-rc-item"><span class="p3-rc-n">&#8599;</span><div><p data-i="152" style="margin:0; color:var(--ink);">Launched for the Malaysia expansion with separate domestic and international flows</p></div></div>
           <div class="p3-rc-item"><span class="p3-rc-n">&#8599;</span><div><p data-i="153" style="margin:0; color:var(--ink);">Validated with 6 POS agents: faster data entry and clearer international requirements</p></div></div>
         </div>
@@ -1202,6 +1207,7 @@
       <div class="pv-col-main">
         <div data-i="125" class="pv-meta-label">Overview</div>
         <p data-i="165" class="pv-text">Building an AI productivity experience is more than designing a chatbot. The challenge was understanding how people actually want AI to fit into their daily workflow.</p>
+        <p data-i="423" class="pv-text">Qubio is the AI assistant inside Qubiql, the productivity app I designed as the sole designer at DesktopIP.</p>
       </div>
       <div class="pv-col-side">
         <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div class="pv-text">AI</div></div>
@@ -1274,8 +1280,8 @@
           </ol>
           <div class="pv-impact reveal">
             <div data-i="94" class="pv-worked">Impact</div>
-            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="191">Add an impact metric or outcome here</strong></div>
-            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="192">Add another impact metric or outcome here</strong></div>
+            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="191">Shipped as Qubio&rsquo;s core assistant, used by 1,003 users</strong></div>
+            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="192">Chat connected to real actions: reminders, goal creation, and goal duplication</strong></div>
           </div>
         </div>
       </div>
@@ -1381,11 +1387,9 @@
         </div>
       </div>
       <div class="pv-project-media">
-        <div class="pv-shot pv-shot-dummy reveal" data-step="1" style="aspect-ratio:4/3;"><span>Dummy image 6</span></div>
-        <div class="pv-shot pv-shot-dummy reveal" data-step="1" style="aspect-ratio:16/10;"><span>Dummy image 7</span></div>
-        <div class="pv-shot pv-shot-dummy reveal" data-step="2" style="aspect-ratio:1/1;"><span>Dummy image 8</span></div>
-        <div class="pv-shot pv-shot-dummy reveal" data-step="2" style="aspect-ratio:4/3;"><span>Dummy image 9</span></div>
-        <div class="pv-shot pv-shot-dummy reveal" data-step="3" style="aspect-ratio:16/10;"><span>Dummy image 10</span></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="1" style="background:#F1F4FB; overflow:hidden; padding:62px 30px 36px;"><span data-i="227" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Account Integration</span><img src="tokodistributor-supplier.png" alt="Tokodistributor supplier web: connecting a store to Tokopedia and TikTok Shop" loading="lazy" style="display:block; width:100%; height:auto;"></div>
+        <div class="pv-shot pv-labeled-shot reveal tk-flow" data-step="2"><span data-i="230" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Product Synchronization</span><ol><li><span class="tk-n">01</span><b>Manage</b><span>Pick Tokodistributor products to sell on TikTok</span></li><li><span class="tk-n">02</span><b>Review</b><span>Check price, variants, and category mapping</span></li><li><span class="tk-n">03</span><b>Publish</b><span>Upload to the connected TikTok store in one step</span></li></ol></div>
+        <div class="pv-shot pv-labeled-shot reveal tk-flow" data-step="3"><span data-i="233" class="pv-live-badge b-violet"><span class="pv-live-dot"></span>Stock Synchronization</span><ol><li><span class="tk-n">01</span><b>Sell</b><span>An order comes in on either platform</span></li><li><span class="tk-n">02</span><b>Update</b><span>Warehouse stock is deducted once</span></li><li><span class="tk-n">03</span><b>Sync</b><span>TikTok stock follows automatically, no overselling</span></li></ol></div>
       </div>
     </div>
     <div class="p3-outcome">
@@ -1412,7 +1416,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Siti Zuliatul Faidah</span>
-    <div class="socials"><a href="#">Medium</a><a href="#">Twitter</a><a href="#">LinkedIn</a></div>
+    <div class="socials"><a href="https://www.linkedin.com/in/siti-zuliatul-faidah/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:sitizuliatulf@gmail.com">Email</a></div>
   </div>
 </footer>
 
