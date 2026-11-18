@@ -4,9 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Siti Zuliatul Faidah — Product Designer</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#ff5a2d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff; --surface:#ffffff; --line:#e8e8e5;
@@ -53,6 +58,7 @@
   .hero-eyebrow{font-size:13px; font-weight:800; letter-spacing:.3em; text-transform:uppercase; color:var(--accent); margin-bottom:22px;}
   .hero .hero-title{font-size:clamp(30px,3.7vw,50px); font-weight:800; line-height:1.07; letter-spacing:-.025em; color:var(--ink);}
   .hero-title .grad{background:linear-gradient(90deg,#ffb89f 0%,#ff7a4d 42%,#ff5a2d 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;}
+  .hero-spec{margin:2px 0 20px; font-size:clamp(16px,2vw,20px); font-weight:700; color:var(--muted); letter-spacing:.01em;}
   .role-rotator{display:inline-grid; vertical-align:top; margin-bottom:-.16em;}
   .role-rotator .role-item{font-size:inherit; font-weight:inherit; line-height:inherit; margin:0; grid-area:1/1; justify-self:start; width:max-content; white-space:nowrap; padding-bottom:.16em; opacity:0; transform:translateY(.3em); will-change:transform,opacity;}
   .role-rotator .role-item.is-active{opacity:1; transform:none; transition:opacity .45s ease .12s, transform .55s cubic-bezier(.22,1,.36,1) .12s;}
@@ -321,6 +327,186 @@
   @keyframes pvScrollUp{0%{transform:translateY(0);} 12%{transform:translateY(0);} 88%{transform:translateY(-253px);} 100%{transform:translateY(-253px);}}
   @media (prefers-reduced-motion:reduce){ #pvShotMain .pv-scroll-track{animation:none;} }
   .pv-shot-chat{background:#F1F4FB; aspect-ratio:16/9; display:flex; justify-content:center; align-items:flex-end; gap:56px; padding:48px 32px 0; overflow:hidden;}
+  .tk-flow{background:#F1F4FB; padding:72px 32px 36px;} .tk-flow ol{list-style:none; margin:0; padding:0; display:grid; gap:14px;} .tk-flow li{background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px 20px; display:grid; grid-template-columns:auto 1fr; column-gap:14px; row-gap:2px;} .tk-flow .tk-n{grid-row:span 2; font-weight:800; color:#ff5a2d;} .tk-flow b{color:var(--ink);} .tk-flow li>span:last-child{color:var(--muted); font-size:14px;}
+
+  /* Pay-later case study */
+  .pl-mock{background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; font-size:13px; color:var(--ink); box-shadow:0 14px 30px -18px rgba(23,21,18,.25);}
+  .pl-mock h4{margin:0 0 10px; font-size:13px; font-weight:800;}
+  .pl-row{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 0; border-top:1px solid var(--line);}
+  .pl-row:first-of-type{border-top:none;}
+  .pl-row small{display:block; color:var(--muted); font-size:11.5px; margin-top:2px;}
+  .pl-chip{flex-shrink:0; font-size:11px; font-weight:800; padding:4px 9px; border-radius:999px; background:#eef1f7; color:#4a5068;}
+  .pl-chip.ok{background:#e3f7ef; color:#12855b;} .pl-chip.warn{background:#fff2ea; color:#d9481c;} .pl-chip.due{background:#fff6dc; color:#9a6a00;}
+  .pl-kpis{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-bottom:12px;}
+  .pl-kpi{background:#F6F8FC; border-radius:12px; padding:10px;} .pl-kpi b{display:block; font-size:16px; font-weight:800;} .pl-kpi span{font-size:11px; color:var(--muted);}
+  .pl-opt{display:flex; align-items:center; gap:10px; padding:12px; border:1.5px solid var(--line); border-radius:12px; margin-top:8px;}
+  .pl-opt.sel{border-color:#ff5a2d; background:#fff8f4;}
+  .pl-opt i{width:16px; height:16px; border-radius:50%; border:2px solid #c9cdd8; flex-shrink:0;} .pl-opt.sel i{border:5px solid #ff5a2d;}
+  .pl-opt div{flex:1;} .pl-opt small{display:block; color:var(--muted); font-size:11.5px;}
+  .pl-bar{height:6px; border-radius:6px; background:#eef1f7; overflow:hidden; margin-top:6px;} .pl-bar b{display:block; height:100%; background:#ff5a2d; border-radius:6px;}
+  .pl-btn{margin-top:12px; text-align:center; background:#ff5a2d; color:#fff; font-weight:800; border-radius:10px; padding:10px;}
+  .pl-shot{background:#F1F4FB; padding:66px 28px 30px; display:flex; justify-content:center;}
+  .pl-shot .pl-mock{width:100%; max-width:440px;}
+  .pl-note{font-size:12px; color:var(--muted); margin:10px 0 0;}
+  .pl-home{display:flex; align-items:center; justify-content:center; padding:24px;}
+  .pl-home .pl-mock{width:100%; max-width:420px;}
+  .pl-stat{flex:1 1 0; display:flex; flex-direction:column; justify-content:center; padding:20px 22px; border-radius:18px; background:#F1F4FB;}
+  .pl-stat b{font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-.02em; color:var(--ink);} .pl-stat span{color:var(--muted); font-weight:600; font-size:14px;}
+  .pl-stat + .pl-stat{margin-top:18px;}
+  @media (max-width:720px){ .pl-stat + .pl-stat{margin-top:0;} .pl-shot{padding:60px 14px 20px;} }
+
+  .pl-widget{position:relative; overflow:hidden; border-radius:18px; padding:18px 20px; color:#fff; background:linear-gradient(135deg,#7b61e8 0%,#5b49c9 100%); box-shadow:0 18px 34px -18px rgba(91,73,201,.6);}
+  .pl-widget::after{content:""; position:absolute; right:-30px; top:-30px; width:140px; height:140px; border-radius:50%; background:rgba(255,255,255,.1);}
+  .pl-widget small{display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; opacity:.92;}
+  .pl-widget small i{width:18px; height:13px; border:2px solid #fff; border-radius:3px; display:inline-block;}
+  .pl-widget b{display:block; font-size:28px; font-weight:800; letter-spacing:-.02em; margin:4px 0 12px;}
+  .pl-pills{display:flex; gap:8px; flex-wrap:wrap;} .pl-pills span{font-size:12px; font-weight:700; padding:5px 11px; border-radius:999px;}
+  .pl-pills .r{background:#ff4d4f; color:#fff;} .pl-pills .y{background:#ffd666; color:#4a3500;}
+  .pl-sum{display:grid; grid-template-columns:1.2fr 1fr; gap:10px 14px; padding:14px; border:1.5px solid #ffd6c2; border-radius:14px; background:linear-gradient(120deg,#fff 60%,#fff6f1);}
+  .pl-sum div span{display:block; font-size:11px; color:var(--muted);} .pl-sum div b{font-size:14px; font-weight:800;}
+  .pl-sum .big b{font-size:22px;} .pl-sum .big{grid-row:span 3; align-self:center;}
+  .pl-sum .links{grid-column:1/-1; display:flex; justify-content:space-between; border-top:1px solid #ffe4d6; padding-top:9px; font-size:11.5px; font-weight:700; color:#ff5a2d;}
+  .pl-sum .links em{font-style:normal; color:#2f7de1;}
+  .pl-bill{display:grid; grid-template-columns:1fr auto auto; align-items:center; gap:10px; padding:11px 12px; border:1px solid var(--line); border-radius:12px; margin-top:8px; background:#fff;}
+  .pl-bill span{display:block; font-size:11px; color:var(--muted);} .pl-bill b{font-size:13px; font-weight:800;}
+  .pl-bill .due{text-align:center;} .pl-bill .due .pl-chip{display:inline-block; margin-top:3px;}
+  .pl-bill .pl-pay{font-size:12px; font-weight:800; color:#fff; background:#ff5a2d; border-radius:8px; padding:7px 12px;}
+  .pl-chip.late{background:#ffe9e9; color:#d4282f;}
+  .pl-warn{display:flex; gap:10px; padding:11px 12px; border-radius:12px; background:#fff6dc; color:#7a5300; font-size:12px; line-height:1.45;}
+  .pl-warn i{flex-shrink:0; width:18px; height:18px; border-radius:50%; background:#f5a623; color:#fff; font-style:normal; font-weight:800; font-size:12px; display:flex; align-items:center; justify-content:center;}
+  .pl-warn ul{margin:0; padding-left:14px;}
+  .pl-sheet{margin-top:10px; border:1px solid var(--line); border-radius:12px; padding:12px 14px; background:#fff;}
+  .pl-sheet h5{margin:0 0 8px; font-size:13px; font-weight:800; display:flex; justify-content:space-between;} .pl-sheet h5 span{color:var(--muted);}
+  .pl-sheet ol{margin:0; padding-left:18px; font-size:12px; line-height:1.55; color:var(--ink);} .pl-sheet li{margin-bottom:4px;} .pl-sheet li small{display:block; color:var(--muted); font-size:11.5px;}
+  .pl-home{flex-direction:column; gap:14px;} .pl-home .pl-widget,.pl-home .pl-mock{width:100%; max-width:420px;}
+
+  .pl-scene{position:relative; overflow:hidden; border-radius:18px; background:#EEF1F8; min-height:340px;}
+  .pl-scene .pl-screen{position:absolute; left:20%; top:13%; width:118%; max-width:none; height:auto; border-radius:14px; border:1px solid #e3e6ee; box-shadow:0 30px 60px -24px rgba(30,34,60,.35); transform:perspective(2000px) rotateX(10deg) rotateY(-14deg) rotateZ(-9deg); transform-origin:0 0;}
+  .pl-scene .pl-float{position:absolute; left:5%; bottom:9%; width:min(46%,250px); transform:rotate(-9deg); padding:14px 16px; box-shadow:0 20px 40px -16px rgba(91,73,201,.55);}
+  .pl-scene .pl-float b{display:block; height:16px; width:72%; border-radius:8px; background:rgba(255,255,255,.45); margin:10px 0 12px;}
+  .pl-scene .pl-float .pl-pills span{font-size:11px; padding:4px 9px;}
+  .pl-hero{margin:8px 0 72px; height:clamp(340px,46vw,560px);}
+  @media (max-width:720px){ .pl-scene .pl-screen{left:14%; width:150%;} .pl-scene .pl-float{width:58%;} }
+
+  .gw{position:relative; overflow:hidden; background:#826BD7; color:#fff; border-radius:22px; padding:20px 22px; font-family:'Montserrat',Manrope,sans-serif; box-shadow:0 22px 40px -22px rgba(98,74,200,.65);}
+  .gw-deco{position:absolute; right:12px; top:12px; width:130px; height:auto; pointer-events:none;}
+  .gw-t{position:relative; display:flex; align-items:center; gap:12px; font-size:17px; font-weight:500; letter-spacing:-.01em;}
+  .gw-t svg{width:30px; height:30px; flex-shrink:0;}
+  .gw-amt{position:relative; font-size:clamp(28px,2.9vw,34px); font-weight:700; letter-spacing:-.02em; line-height:1.1; margin:4px 0 12px 42px;}
+  .gw-chips{position:relative; display:flex; flex-wrap:wrap; gap:6px; margin-left:42px;}
+  .gw-chips span{font-size:13px; font-weight:500; padding:6px 11px; border-radius:999px; white-space:nowrap;}
+  .gw-chips b{font-weight:700;}
+  .gw-chips .r{background:#FF3B3B; color:#fff;} .gw-chips .y{background:#FFD95A; color:#524232;}
+  .gw-off{display:flex; align-items:center; gap:16px; padding:16px 18px 16px 22px;}
+  .gw-off .gw-txt{flex:1; min-width:0;}
+  .gw-off .gw-t{font-size:16px;} .gw-off .gw-t svg{width:24px; height:24px;}
+  .gw-off p{position:relative; margin:6px 0 0 36px; font-size:14px; font-weight:700; line-height:1.35;}
+  .gw-btn{position:relative; z-index:1; flex-shrink:0; background:#fff; color:#2b2b33; font-weight:600; font-size:16px; padding:11px 18px; border-radius:12px;}
+  .gw-frame{width:100%; max-width:460px; display:flex; flex-direction:column; gap:10px;}
+  .gw-cap{display:flex; align-items:center; gap:8px; font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--muted);}
+  .gw-cap i{width:8px; height:8px; border-radius:50%; background:#c9cdd8;} .gw-cap.on i{background:#1eb980;}
+  .gw-arrow{align-self:center; width:34px; height:34px; border-radius:50%; background:#fff; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:#826BD7; font-weight:800; margin:4px 0;}
+  @media (max-width:720px){ .gw-deco{width:110px;} .gw-t{font-size:16px;} .gw-amt{margin-left:0;} .gw-chips{margin-left:0;} .gw-chips span{font-size:12px;} .gw-off{flex-wrap:wrap;} .gw-off p{margin-left:0;} }
+
+  .pl-step{height:clamp(380px,36vw,460px); padding:0 !important; display:block !important; background:#EEF1F8 !important;}
+  .pl-legend{position:absolute; left:6%; bottom:7%; z-index:2; background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px 16px; transform:rotate(-9deg); box-shadow:0 20px 40px -18px rgba(30,34,60,.35); font-family:'Montserrat',Manrope,sans-serif;}
+  .pl-legend small{display:block; font-size:11px; font-weight:700; color:var(--muted); margin-bottom:8px;}
+  .pl-legend div{display:flex; flex-direction:column; align-items:flex-start; gap:6px;}
+  .pl-legend span{font-size:12px; font-weight:600; padding:4px 10px; border-radius:999px;}
+  .pl-legend .l1{background:#FFE5E5; color:#E02424;} .pl-legend .l2{background:#FFE5E5; color:#C81E1E;} .pl-legend .l3{background:#FFEBDD; color:#F0711E;}
+  .pl-step .pl-screen{left:13%; top:12%; width:138%;}
+  @media (max-width:720px){ .pl-step{height:400px;} }
+
+  .bp{font-family:'Montserrat',Manrope,sans-serif; color:#1d1d24;}
+  .bp-card{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px 18px; box-shadow:0 18px 36px -24px rgba(30,34,60,.35);}
+  .bp-card h5{margin:0 0 12px; font-size:15px; font-weight:600;}
+  .bp-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px 16px;}
+  .bp-grid small{display:block; font-size:12px; font-weight:600; margin-bottom:5px;}
+  .bp-grid em{font-style:normal; font-size:12.5px; color:#3b3b45;}
+  .bp-bar{display:block; height:10px; border-radius:6px; background:#E3E6EE;}
+  .bp-note{display:flex; align-items:center; gap:8px; margin-top:12px; padding:7px 10px; border-radius:8px; background:#FFF4D9; color:#9A5B00; font-size:11.5px;}
+  .bp-note i{width:15px; height:15px; border-radius:50%; background:#F5A623; color:#fff; font-style:normal; font-weight:800; font-size:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .bp-head{display:flex; justify-content:space-between; align-items:center; padding-bottom:12px; border-bottom:1px solid var(--line); font-size:14px; font-weight:600;}
+  .bp-pill{font-size:12px; font-weight:500; color:#E3161D; background:#FFDDE0; padding:3px 10px; border-radius:999px;}
+  .bp-sub{margin:12px 0 4px; font-size:14px; font-weight:600;}
+  .bp-opt{display:flex; align-items:center; gap:10px; padding:9px 0; font-size:13px; font-weight:500;}
+  .bp-opt .ic{width:24px; height:24px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:8px; font-weight:800; background:#F2F4F8; color:#555;}
+  .bp-opt .ic.s{background:#4D8DF5; color:#fff;}
+  .bp-opt div{flex:1; min-width:0;} .bp-opt div small{display:flex; align-items:center; gap:6px; font-size:11px; font-weight:400; color:#9aa0ad; margin-top:2px;}
+  .bp-opt .rd{width:18px; height:18px; border-radius:50%; border:1.5px solid #c9cdd8; flex-shrink:0;}
+  .bp-opt .rd.on{border:5px solid #E3161D; box-shadow:0 0 0 1.5px #fff inset;}
+  .bp-opt.off{opacity:.45;}
+  .bp-more{text-align:center; font-size:12px; font-weight:600; color:#E3161D; padding:2px 0 10px; border-bottom:1px solid var(--line);}
+  .bp-row{display:flex; justify-content:space-between; align-items:center; font-size:12.5px; padding:5px 0;}
+  .bp-row.t{font-weight:700; font-size:13.5px; border-top:1.5px dashed #dfe2ea; border-bottom:1.5px dashed #dfe2ea; margin-top:6px; padding:9px 0;}
+  .bp-btn{margin-top:12px; text-align:center; border-radius:10px; padding:10px; font-size:13px; font-weight:600; background:#E3161D; color:#fff;}
+  .bp-btn.o{margin-top:8px; background:#fff; color:#E3161D; border:1.5px solid #E3161D;}
+  .pl-detail .pl-screen{left:-26%; top:20%; width:122%;}
+
+  .pl-stat{position:relative; overflow:hidden;}
+  .pl-stat b,.pl-stat span{position:relative; z-index:1; max-width:50%;}
+  .pl-stat-img{position:absolute; z-index:0; left:56%; top:20%; width:80%; max-width:none; height:auto; border-radius:10px; border:1px solid #e3e6ee; box-shadow:0 18px 36px -18px rgba(30,34,60,.35); transform:perspective(1400px) rotateX(8deg) rotateY(-12deg) rotateZ(-9deg); pointer-events:none;}
+  .pl-stat-img.b2{left:56%; top:22%; width:92%;}
+  @media (max-width:720px){ .pl-stat b,.pl-stat span{max-width:none;} .pl-stat{min-height:150px; justify-content:flex-start;} .pl-stat-img{left:12%; top:56%; width:150%;} .pl-stat-img.b2{left:12%; top:56%; width:160%;} .pl-stat{min-height:230px;} }
+
+  .vibe-card .vb{position:relative; overflow:hidden; display:block; text-decoration:none; color:inherit;}
+  .vb-win{position:absolute; left:7%; top:9%; width:100%; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 24px 50px -24px rgba(30,34,60,.35); border:1px solid #e3e6ee; transition:transform .35s ease;}
+  .vb-win i{display:flex; gap:5px; padding:8px 10px; background:#f6f7fa; border-bottom:1px solid #eceef3;} .vb-win i b{width:8px; height:8px; border-radius:50%; background:#d9dce4;}
+  .vb-win img{display:block; width:100%; height:auto;}
+  .vb-phone{position:absolute; left:50%; top:10%; width:46%; transform:translateX(-50%); border-radius:26px; overflow:hidden; border:6px solid #1d1f27; box-shadow:0 24px 50px -24px rgba(30,34,60,.45); transition:transform .35s ease;}
+  .vb-phone img{display:block; width:100%; height:auto;}
+  .vb:hover .vb-win{transform:translateY(-6px);} .vb:hover .vb-phone{transform:translateX(-50%) translateY(-6px);}
+  .vb-tag{position:absolute; left:14px; bottom:14px; z-index:2; display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,.94); border:1px solid var(--line); border-radius:999px; padding:7px 13px; font-size:13px; font-weight:700; color:var(--ink); box-shadow:0 8px 20px -10px rgba(30,34,60,.3);}
+  .vb-tag span{color:var(--muted); font-weight:600;}
+  .vibe-card .phone-stack .vb{flex:1 1 0; min-height:0; border-radius:18px; background:#F1F4FB;}
+  .vibe-card .phone-stack .vb + .vb{margin-top:18px;}
+  @media (max-width:720px){ .vibe-card .pt2-panel.vb{height:240px;} .vibe-card .phone-stack .vb{height:220px; flex:1 1 0;} .vibe-card .phone-stack .vb + .vb{margin-top:0;} .vb-tag{font-size:11px; padding:5px 9px; left:8px; bottom:8px;} .vb-tag span{display:none;} }
+
+  .vc-proj{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr); gap:56px; margin-top:96px; align-items:start;}
+  .vc-text{position:sticky; top:120px;}
+  .vc-text .pv-label{margin-bottom:10px;}
+  .vc-text h2{margin:0 0 18px; font-size:clamp(26px,2.6vw,34px); font-weight:800; letter-spacing:-.02em;}
+  .vc-text p{color:var(--ink); line-height:1.65; margin:0 0 14px; font-size:15.5px;}
+  .vc-facts{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 22px;}
+  .vc-facts span{font-size:12.5px; font-weight:700; padding:6px 11px; border-radius:999px; background:#F1F4FB; color:var(--ink);}
+  .vc-live{display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:999px; background:var(--accent); color:#fff; box-shadow:0 6px 14px -6px rgba(255,90,45,.7); font-weight:700; font-size:14px; text-decoration:none; transition:filter .2s ease;}
+  .vc-live:hover{filter:brightness(1.06);}
+  .vc-media{display:flex; flex-direction:column; gap:20px;}
+  .vc-shot{position:relative; overflow:hidden; border-radius:22px; background:#ECEEF3; padding:6% 6% 0;}
+  .vc-shot.pad{padding:6%;}
+  .vc-win{border-radius:12px 12px 0 0; overflow:hidden; background:#fff; border:1px solid #dfe2ea; border-bottom:none; box-shadow:0 20px 40px -26px rgba(30,34,60,.35);}
+  .vc-shot.pad .vc-win{border-radius:12px; border-bottom:1px solid #dfe2ea;}
+  .vc-win i{display:flex; gap:5px; padding:9px 12px; background:#f6f7fa; border-bottom:1px solid #eceef3;} .vc-win i b{width:8px; height:8px; border-radius:50%; background:#d6d9e1;}
+  .vc-win img{display:block; width:100%; height:auto;}
+  .vc-two{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .vc-two .vc-shot{padding:9% 0 0 9%;}
+  .vc-two .vc-win{border-radius:12px 0 0 0; border-right:none; height:100%;}
+  .vc-two .vc-win img{width:170%; max-width:none;}
+  .vc-phones{display:flex; justify-content:center; gap:6%; padding:7% 6% 0;}
+  .vc-phone{width:34%; border-radius:28px 28px 0 0; overflow:hidden; border:7px solid #1d1f27; border-bottom:none; box-shadow:0 20px 40px -24px rgba(30,34,60,.45);}
+  .vc-phone img{display:block; width:100%; height:auto; aspect-ratio:390/700; object-fit:cover; object-position:top;}
+  .vc-panels{display:flex; justify-content:center; gap:5%; padding:7% 6% 0;}
+  .vc-panels img{width:40%; height:auto; border-radius:14px 14px 0 0; border:1px solid #dfe2ea; border-bottom:none; box-shadow:0 20px 40px -24px rgba(30,34,60,.35); display:block; aspect-ratio:640/1100; object-fit:cover; object-position:top;}
+  @media (max-width:900px){ .vc-proj{grid-template-columns:1fr; gap:28px; margin-top:64px;} .vc-text{position:static;} .vc-two{grid-template-columns:1fr; gap:14px;} .vc-media{gap:14px;} .vc-phone{width:42%;} .vc-panels img{width:44%;} }
+
+  .vc-sheets{display:flex; justify-content:center; gap:4%; padding:9% 5% 7%;}
+  .vc-sheets img{width:30%; height:auto; aspect-ratio:3/3.7; object-fit:cover; object-position:top; background:#fff; border-radius:6px; box-shadow:0 18px 36px -20px rgba(30,34,60,.4); display:block;}
+  .vc-sheets img:nth-child(2){transform:translateY(-4%);}
+  .vc-cap{position:absolute; left:18px; top:16px; font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--muted);}
+  @media (max-width:900px){ .vc-sheets{gap:3%; padding:14% 4% 6%;} }
+
+  footer.ft{border-top:1px solid var(--line); padding:44px 0 calc(36px + env(safe-area-inset-bottom,0px));}
+  footer.ft .ft-grid{display:grid; grid-template-columns:1fr minmax(0,360px); gap:24px 36px; align-items:start;}
+  .ft-id{display:flex; gap:14px; font-size:13px; font-weight:600; line-height:1.7; letter-spacing:.05em; color:var(--ink);}
+  .ft-dot{width:11px; height:11px; border-radius:50%; background:var(--accent); flex-shrink:0; margin-top:4px;}
+  .ft-col{display:flex; flex-direction:column; border-top:1px solid var(--ink);}
+  .ft-row{display:flex; align-items:center; justify-content:space-between; padding:13px 6px; border-bottom:1px solid var(--line); color:var(--ink); text-decoration:none; font-size:15px; font-weight:600; transition:color .2s ease, padding .2s ease;}
+  .ft-row i{font-style:normal; font-size:14px; transition:transform .2s ease;}
+  .ft-row:hover{color:var(--accent); padding-left:12px;}
+  .ft-row:hover i{transform:translate(2px,-2px);}
+  .ft-copy{grid-column:1/-1; font-size:12px; color:var(--muted); letter-spacing:.04em;}
+  @media (max-width:860px){ footer.ft .ft-grid{grid-template-columns:1fr minmax(0,300px);} }
+  @media (max-width:520px){ footer.ft .ft-grid{grid-template-columns:1fr; gap:0;} .ft-id{margin-bottom:24px;} .ft-col + .ft-col{border-top:none;} .ft-copy{margin-top:24px;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -613,7 +799,8 @@
     <div class="hero-grid">
       <div class="hero-copy">
         <div data-i="4" class="hs-badge"><i class="hs-dot"></i>Available for work</div>
-        <h1 class="hero-title">Siti Zuliatul Faidah<br><span class="role-rotator"><span class="role-item grad is-active">Product Designer.</span><span class="role-item grad" aria-hidden="true">UI/UX Designer.</span><span class="role-item grad" aria-hidden="true">Interaction Designer.</span><span class="role-item grad" aria-hidden="true">UX Researcher.</span></span></h1>
+        <h1 class="hero-title">Siti Zuliatul Faidah<br><span class="role-rotator"><span class="role-item grad is-active">Product Designer.</span></span></h1>
+        <p data-i="422" class="hero-spec">Logistics, Fintech &amp; B2B Tools</p>
         <ul class="hs-list">
           <li><i class="hs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span data-i="6">6 years of experience designing <strong>complex digital products</strong> across AI, logistics, e-commerce, and B2B platforms</span></li>
           <li><i class="hs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span data-i="7">Skilled in turning complex business requirements into <strong>intuitive, user-centered experiences</strong></span></li>
@@ -680,7 +867,7 @@
             <circle class="nav-ripple" id="navRipple" cx="237" cy="568" r="26" fill="#fff"/>
             <g transform="translate(169 121)"><rect id="navChipBg" x="-82" y="-10.5" width="164" height="21" rx="10.5" fill="#fff" stroke="#dcdfe6" stroke-width="1"/><text id="navChipTxt" y="4" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1d2030" font-family="Manrope,Arial,sans-serif">Siap menavigasi</text></g>
           </svg></div></div>
-              <div class="pt-card"><i class="pt-ic">&#8600;</i><div><b data-i="26">~40% fewer &ldquo;address not found&rdquo;</b><span data-i="27">Route Planning</span></div></div>
+              <div class="pt-card"><i class="pt-ic">&#8600;</i><div><b data-i="26">47% fewer &ldquo;address not found&rdquo;</b><span data-i="27">Route Planning</span></div></div>
               <div class="pt-card"><i class="pt-ic">&#8600;</i><div><b data-i="28">37% fewer cancelled pickups</b><span data-i="29">Route Visibility</span></div></div>
               <div class="pt-card"><i class="pt-ic">&#9635;</i><div><b data-i="30">6 ways to order tasks</b><span data-i="31">Task Ordering</span></div></div>
               <div class="pt-card"><i class="pt-ic">&#9635;</i><div><b data-i="32">3 case studies</b><span data-i="33">Driver App &amp; Shipment Booking</span></div></div>
@@ -694,6 +881,35 @@
       </div>
     </a>
 
+    <a href="#project-paylater" class="project-showcase">
+      <div class="showcase-visual pt-visual">
+        <div class="showcase-overlay">
+          <div class="vp-circle">
+            <span data-i="17" class="vp-line">View <span class="vp-arrow">↗</span></span>
+            <span data-i="18" class="vp-line">Project</span>
+          </div>
+        </div>
+      <div class="pt-head">
+        <div class="pt-head-main">
+          <div class="pt-eyebrow"><span class="pt-num">02</span><span data-i="430" class="pt-lab">Fintech &middot; B2B payments</span><i class="pt-line"></i></div>
+          <div data-i="431" class="pt-h">Agent Pay Later: Booking Now, Paying on Terms</div>
+          <p data-i="432" class="pt-d">Built a credit system from scratch so agents can keep booking shipments without topping up first. 2,500+ shipments on credit, zero bad debt.</p>
+        </div>
+        <div class="pt-meta">
+          <div class="pt-meta-item"><span data-i="22" class="pt-meta-lab">Company</span><span class="pt-meta-val">Lion Parcel</span></div>
+          <div class="pt-meta-item"><span data-i="24" class="pt-meta-lab">Industry</span><span data-i="433" class="pt-meta-val">Logistics &middot; Fintech</span></div>
+        </div>
+      </div>
+      <div class="pt-grid">
+        <div class="pt-cell pl-scene" aria-hidden="true"><img class="pl-screen" src="paylater-limit.webp" width="1366" height="928" loading="lazy" alt="Billing limit page, tilted, with all figures hidden"><div class="pl-widget pl-float"><small><i></i>Billing limit available</small><b></b><div class="pl-pills"><span class="r">3 overdue</span><span class="y">2 due soon</span></div></div></div>
+        <div class="phone-stack">
+          <div class="pl-stat"><img class="pl-stat-img" src="paylater-bill-detail.webp" alt="" loading="lazy"><b>2,500+</b><span data-i="434">shipments booked on credit</span></div>
+          <div class="pl-stat"><img class="pl-stat-img b2" src="paylater-bills.webp" alt="" loading="lazy"><b>0</b><span data-i="435">bad debt since launch</span></div>
+        </div>
+      </div>
+      </div>
+    </a>
+
     <a href="#project-2" class="project-showcase">
       <div class="showcase-visual pt-visual">
         <div class="showcase-overlay">
@@ -704,7 +920,7 @@
         </div>
       <div class="pt-head">
         <div class="pt-head-main">
-          <div class="pt-eyebrow"><span class="pt-num">02</span><span data-i="34" class="pt-lab">AI product</span><i class="pt-line"></i></div>
+          <div class="pt-eyebrow"><span class="pt-num">03</span><span data-i="34" class="pt-lab">AI product</span><i class="pt-line"></i></div>
           <div data-i="35" class="pt-h">Qubio AI Productivity Experience</div>
           <p data-i="36" class="pt-d">Building an AI productivity experience is more than designing a chatbot.</p>
         </div>
@@ -733,9 +949,9 @@
         </div>
         <div class="pt-head">
         <div class="pt-head-main">
-          <div class="pt-eyebrow"><span class="pt-num">03</span><span data-i="39" class="pt-lab">E-commerce app &amp; Supplier web</span><i class="pt-line"></i></div>
+          <div class="pt-eyebrow"><span class="pt-num">04</span><span data-i="39" class="pt-lab">E-commerce app &amp; Supplier web</span><i class="pt-line"></i></div>
           <div data-i="40" class="pt-h">Tokodistributor - Premium Reseller App &amp; TikTok Seller Integration</div>
-          <p data-i="41" class="pt-d">Add a short description of this project here.</p>
+          <p data-i="41" class="pt-d">Helping resellers discover Premium benefits (+20% sign-ups in the first month), and connecting supplier stock to TikTok Seller.</p>
         </div>
         <div class="pt-meta">
           <div class="pt-meta-item"><span data-i="22" class="pt-meta-lab">Company</span><span class="pt-meta-val">Tokodistributor</span></div>
@@ -757,6 +973,43 @@
         <div class="phone-stack">
           <div class="pt2-dummy" style="position:relative; overflow:hidden;"><img src="tokodistributor-komunitas.jpg" alt="Tokodistributor community banner specification: description, title, CTA, corner radius, and size" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center; pointer-events:none;"></div>
           <div class="pt2-dummy" style="position:relative; overflow:hidden;"><img src="tokodistributor-supplier.png" alt="Tokodistributor supplier web: connecting a store to Tokopedia and TikTok Shop" loading="lazy" style="position:absolute; right:-9%; bottom:0; width:118%; max-width:none; height:auto; filter:drop-shadow(0 8px 12px rgba(23,21,18,.12)); pointer-events:none;"></div>
+        </div>
+      </div>
+      </div>
+    </a>
+    <a href="#vibe-coded" class="project-showcase vibe-card">
+      <div class="showcase-visual pt-visual">
+        <div class="showcase-overlay">
+          <div class="vp-circle">
+            <span data-i="17" class="vp-line">View <span class="vp-arrow">↗</span></span>
+            <span data-i="18" class="vp-line">Project</span>
+          </div>
+        </div>
+      <div class="pt-head">
+        <div class="pt-head-main">
+          <div class="pt-eyebrow"><span class="pt-num">05</span><span data-i="472" class="pt-lab">Side projects &middot; Built with AI</span><i class="pt-line"></i></div>
+          <div data-i="473" class="pt-h">Vibe-coded Apps</div>
+          <p data-i="474" class="pt-d">Exercising product and design thinking beyond the canvas: two consumer web apps I designed and built end to end with AI. Both are live.</p>
+        </div>
+        <div class="pt-meta">
+          <div class="pt-meta-item"><span data-i="475" class="pt-meta-lab">Type</span><span data-i="476" class="pt-meta-val">Web app &middot; Consumers</span></div>
+          <div class="pt-meta-item"><span data-i="477" class="pt-meta-lab">Role</span><span data-i="478" class="pt-meta-val">Design &amp; build</span></div>
+        </div>
+      </div>
+      <div class="pt-grid">
+        <div class="pt2-panel vb">
+          <div class="vb-win"><i><b></b><b></b><b></b></i><img src="vibe-wordly.webp" width="2560" height="1600" loading="lazy" alt="Wordly: learn everyday English vocabulary by memorising, writing, and speaking"></div>
+          <span class="vb-tag">Wordly <span data-i="479">&middot; English vocabulary</span></span>
+        </div>
+        <div class="phone-stack">
+          <div class="vb">
+            <div class="vb-win" style="left:8%; top:12%; width:150%;"><i><b></b><b></b><b></b></i><img src="vc-selarasa-scan.webp" width="2000" height="967" loading="lazy" alt="Selarasa: AI personal color assistant that scans your face on device"></div>
+            <span class="vb-tag">Selarasa <span data-i="480">&middot; Personal color AI</span></span>
+          </div>
+          <div class="vb">
+            <div class="vb-phone"><img src="vibe-wordly-mobile.webp" width="1170" height="2532" loading="lazy" alt="Wordly on mobile"></div>
+            <span class="vb-tag">Wordly <span data-i="481">&middot; Mobile</span></span>
+          </div>
         </div>
       </div>
       </div>
@@ -844,7 +1097,7 @@
   <div class="wrap">
     <h2 data-i="380" style="font-size:clamp(30px,5vw,48px); font-weight:800; max-width:640px; margin:0 auto 20px;">Got an interesting idea to build together?</h2>
     <p data-i="381" style="color:var(--muted); margin-bottom:28px;">Feel free to talk it through first &mdash; a cup of coffee is usually enough to get started.</p>
-    <a data-i="382" class="btn" href="#" style="padding:14px 28px; font-size:15px;">Schedule a Call</a>
+    <a data-i="382" class="btn" href="mailto:sitizuliatulf@gmail.com?subject=Let%27s%20talk%20-%20Product%20Designer" style="padding:14px 28px; font-size:15px;">Get in Touch</a>
   </div>
 </section>
 
@@ -1072,6 +1325,8 @@
       <div class="p3-impactrow" style="grid-column:1 / -1;">
         <div data-i="94" class="pv-meta-label pv-worked p3-sec" style="margin-top:0;">Impact</div>
         <div class="p3-proc p3-two reveal">
+          <div class="p3-rc-item"><span class="p3-rc-n">&#8599;</span><div><p data-i="424" style="margin:0; color:var(--ink);"><strong>Booking time cut from 80s to under 50s</strong> per shipment (target 60s), with OCR auto-fill and repeat-shipment shortcuts</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">&#8599;</span><div><p data-i="425" style="margin:0; color:var(--ink);"><strong>Booking errors down 20%</strong> after separating domestic and international forms</p></div></div>
           <div class="p3-rc-item"><span class="p3-rc-n">&#8599;</span><div><p data-i="152" style="margin:0; color:var(--ink);">Launched for the Malaysia expansion with separate domestic and international flows</p></div></div>
           <div class="p3-rc-item"><span class="p3-rc-n">&#8599;</span><div><p data-i="153" style="margin:0; color:var(--ink);">Validated with 6 POS agents: faster data entry and clearer international requirements</p></div></div>
         </div>
@@ -1202,6 +1457,7 @@
       <div class="pv-col-main">
         <div data-i="125" class="pv-meta-label">Overview</div>
         <p data-i="165" class="pv-text">Building an AI productivity experience is more than designing a chatbot. The challenge was understanding how people actually want AI to fit into their daily workflow.</p>
+        <p data-i="423" class="pv-text">Qubio is the AI assistant inside Qubiql, the productivity app I designed as the sole designer at DesktopIP.</p>
       </div>
       <div class="pv-col-side">
         <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div class="pv-text">AI</div></div>
@@ -1274,8 +1530,8 @@
           </ol>
           <div class="pv-impact reveal">
             <div data-i="94" class="pv-worked">Impact</div>
-            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="191">Add an impact metric or outcome here</strong></div>
-            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="192">Add another impact metric or outcome here</strong></div>
+            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="191">Shipped as Qubio&rsquo;s core assistant, used by 1,003 users</strong></div>
+            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="192">Chat connected to real actions: reminders, goal creation, and goal duplication</strong></div>
           </div>
         </div>
       </div>
@@ -1381,11 +1637,9 @@
         </div>
       </div>
       <div class="pv-project-media">
-        <div class="pv-shot pv-shot-dummy reveal" data-step="1" style="aspect-ratio:4/3;"><span>Dummy image 6</span></div>
-        <div class="pv-shot pv-shot-dummy reveal" data-step="1" style="aspect-ratio:16/10;"><span>Dummy image 7</span></div>
-        <div class="pv-shot pv-shot-dummy reveal" data-step="2" style="aspect-ratio:1/1;"><span>Dummy image 8</span></div>
-        <div class="pv-shot pv-shot-dummy reveal" data-step="2" style="aspect-ratio:4/3;"><span>Dummy image 9</span></div>
-        <div class="pv-shot pv-shot-dummy reveal" data-step="3" style="aspect-ratio:16/10;"><span>Dummy image 10</span></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="1" style="background:#F1F4FB; overflow:hidden; padding:62px 30px 36px;"><span data-i="227" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Account Integration</span><img src="tokodistributor-supplier.png" alt="Tokodistributor supplier web: connecting a store to Tokopedia and TikTok Shop" loading="lazy" style="display:block; width:100%; height:auto;"></div>
+        <div class="pv-shot pv-labeled-shot reveal tk-flow" data-step="2"><span data-i="230" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Product Synchronization</span><ol><li><span class="tk-n">01</span><b>Manage</b><span>Pick Tokodistributor products to sell on TikTok</span></li><li><span class="tk-n">02</span><b>Review</b><span>Check price, variants, and category mapping</span></li><li><span class="tk-n">03</span><b>Publish</b><span>Upload to the connected TikTok store in one step</span></li></ol></div>
+        <div class="pv-shot pv-labeled-shot reveal tk-flow" data-step="3"><span data-i="233" class="pv-live-badge b-violet"><span class="pv-live-dot"></span>Stock Synchronization</span><ol><li><span class="tk-n">01</span><b>Sell</b><span>An order comes in on either platform</span></li><li><span class="tk-n">02</span><b>Update</b><span>Warehouse stock is deducted once</span></li><li><span class="tk-n">03</span><b>Sync</b><span>TikTok stock follows automatically, no overselling</span></li></ol></div>
       </div>
     </div>
     <div class="p3-outcome">
@@ -1409,10 +1663,149 @@
   </div>
 </div>
 
-<footer>
+<div id="paylaterView" class="project3-view" style="display:none;">
+  <div class="pv-topbar wrap"><a data-i="154" href="#top" class="back-link">&larr; Back</a></div>
   <div class="wrap">
-    <span>© 2026 Siti Zuliatul Faidah</span>
-    <div class="socials"><a href="#">Medium</a><a href="#">Twitter</a><a href="#">LinkedIn</a></div>
+    <div class="pv-label">Lion Parcel</div>
+    <h1 data-i="431" class="pv-title">Agent Pay Later: Booking Now, Paying on Terms</h1>
+    <div class="pv-grid">
+      <div class="pv-col-main">
+        <div data-i="125" class="pv-meta-label">Overview</div>
+        <p data-i="436" class="pv-text">Lion Parcel agents run small shipping counters and paid for every booking from a prepaid balance. The business wanted to let trusted agents book on a billing limit and pay later, without taking on bad debt.</p>
+        <p data-i="437" class="pv-text pv-gap">I designed the pay-later experience from scratch: how agents see and use their limit, how bills and due dates are presented, and how the rules on discounts and late payments are made clear.</p>
+        <p data-i="462" class="pv-text pv-gap">This case study walks through the agent (POS) side first, then the internal tools the Lion Parcel team uses to run it.</p>
+      </div>
+      <div class="pv-col-side">
+        <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="438" class="pv-text">Product Designer &middot; Agent web app (POS) &amp; internal tools</div></div>
+        <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div data-i="433" class="pv-text">Logistics &middot; Fintech</div></div>
+        <div class="pv-block"><div data-i="22" class="pv-meta-label">Company</div><div class="pv-text">Lion Parcel</div></div>
+      </div>
+    </div>
+    <div class="pl-scene pl-hero reveal"><img class="pl-screen" src="paylater-limit.webp" width="1366" height="928" alt="Billing limit page, tilted, with all figures hidden"><div class="pl-widget pl-float"><small><i></i>Billing limit available</small><b></b><div class="pl-pills"><span class="r">3 overdue</span><span class="y">2 due soon</span></div></div></div>
+    <div class="pv-project-intro">
+        <div data-i="196" class="pv-meta-label pv-worked p3-sec">Problem</div>
+        <div class="p3-rc reveal">
+          <div class="p3-rc-item"><span class="p3-rc-n">01</span><div><strong data-i="439">Balance blocks bookings</strong><p data-i="440">Agents had to keep a prepaid balance topped up. A low balance meant they could not book shipments for their customers.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">02</span><div><strong data-i="441">Credit means risk</strong><p data-i="442">Credit only works if agents pay back on time. The rules had to be understood before anything went wrong, not after.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">03</span><div><strong data-i="443">Many bills, many dates</strong><p data-i="444">With bills issued every period, agents needed to see at a glance what is overdue, what is due today, and what comes next.</p></div></div>
+        </div>
+    </div>
+    <div class="pv-project" style="margin-top:56px; margin-bottom:96px;">
+      <div class="pv-project-text">
+        <div class="pv-sticky">
+          <div data-i="85" class="pv-meta-label pv-worked">What I worked on</div>
+          <p data-i="445" class="p3-sub">See limit &rarr; Track bills &rarr; Pay the bill</p>
+          <ol class="pv-stepper">
+            <li class="pv-step active" data-go="1">
+              <div class="pv-step-head"><span class="pv-step-num">01</span><span data-i="446" class="pv-step-title">Limit at a Glance</span></div>
+              <div class="pv-step-body"><div><p data-i="447" class="pv-step-desc">A home widget shows the available limit with overdue and due-soon counts. The limit page breaks it down into remaining, used, and total limit, plus the agent&rsquo;s payment scheme.</p></div></div>
+            </li>
+            <li class="pv-step" data-go="2">
+              <div class="pv-step-head"><span class="pv-step-num">02</span><span data-i="448" class="pv-step-title">Bills by Urgency</span></div>
+              <div class="pv-step-body"><div><p data-i="449" class="pv-step-desc">Each bill shows its period, amount, due date, discount earned, and status. Colour-coded labels (overdue, due today, days left) tell agents what to pay first.</p></div></div>
+            </li>
+            <li class="pv-step" data-go="3">
+              <div class="pv-step-head"><span class="pv-step-num">03</span><span data-i="450" class="pv-step-title">Paying the Bill</span></div>
+              <div class="pv-step-body"><div><p data-i="451" class="pv-step-desc">Agents pay each bill for their pay-later shipments to Lion Parcel and choose how to pay: their balance or a bank virtual account. If the balance is not enough, that option is disabled with the reason, so agents pick another method instead of hitting an error.</p></div></div>
+            </li>
+          </ol>
+          <div class="dd-card reveal">
+            <span data-i="115" class="dd-badge"><i></i>Design decision</span>
+            <h3 data-i="452" class="dd-title">Show what is at stake on every bill</h3>
+            <p data-i="453" class="dd-desc">Every bill shows how many days are left and that the discount is lost after the due date. Once a bill is overdue, it says the discount has expired. Agents see the cost of waiting at the moment they decide to pay.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pv-project-media">
+        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="1"><span data-i="446" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Limit at a Glance</span>
+          <div class="gw-frame"><div class="gw-cap"><i></i><span data-i="458">Before activation</span></div><div class="gw gw-off"><svg class="gw-deco" style="width:96px; right:10px; top:6px; opacity:.55" viewBox="0 0 200 140" fill="none" aria-hidden="true"><rect x="18" y="10" width="120" height="78" rx="8" fill="#8E79DD" stroke="#9C89E3" stroke-width="2.5"/><rect x="30" y="22" width="34" height="5" rx="2.5" fill="#9C89E3"/><rect x="100" y="58" width="22" height="16" rx="3" fill="#9C89E3"/><path d="M92 136a54 54 0 0 1 108 0h-26a28 28 0 0 0-56 0z" fill="#8E79DD" stroke="#9C89E3" stroke-width="2.5"/><path d="M146 82v28M118 98l20 16" stroke="#9C89E3" stroke-width="2.5"/><path d="M168 18l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#9C89E3"/><path d="M186 46l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#9C89E3"/></svg><div class="gw-txt"><div class="gw-t"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.6" aria-hidden="true"><rect x="3.5" y="6.5" width="25" height="19" rx="5"/><path d="M3.5 13h25"/></svg>Limit Tagihan</div><p>Dapatkan limit hingga Rp500.000.000 untuk bertransaksi.</p></div><span class="gw-btn">Aktifkan</span></div><div class="gw-arrow" aria-hidden="true">&darr;</div><div class="gw-cap on"><i></i><span data-i="459">Active limit</span></div><div class="gw"><svg class="gw-deco" viewBox="0 0 200 140" fill="none" aria-hidden="true"><rect x="18" y="10" width="120" height="78" rx="8" fill="#8E79DD" stroke="#9C89E3" stroke-width="2.5"/><rect x="30" y="22" width="34" height="5" rx="2.5" fill="#9C89E3"/><rect x="100" y="58" width="22" height="16" rx="3" fill="#9C89E3"/><path d="M92 136a54 54 0 0 1 108 0h-26a28 28 0 0 0-56 0z" fill="#8E79DD" stroke="#9C89E3" stroke-width="2.5"/><path d="M146 82v28M118 98l20 16" stroke="#9C89E3" stroke-width="2.5"/><path d="M168 18l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#9C89E3"/><path d="M186 46l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#9C89E3"/></svg><div class="gw-t"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.6" aria-hidden="true"><rect x="3.5" y="6.5" width="25" height="19" rx="5"/><path d="M3.5 13h25"/></svg>Limit Tagihan tersedia</div><div class="gw-amt">Rp7.000.000</div><div class="gw-chips"><span class="r"><b>3</b> Jatuh tempo</span><span class="y"><b>2</b> akan jatuh tempo</span></div></div></div></div>
+        <div class="pv-shot pv-labeled-shot reveal pl-scene pl-step" data-step="2"><span data-i="448" class="pv-live-badge b-blue" style="z-index:3;"><span class="pv-live-dot"></span>Bills by Urgency</span><img class="pl-screen" src="paylater-bills.webp" width="1828" height="1340" loading="lazy" alt="Billing limit page with unpaid bills sorted by urgency, all figures hidden"><div class="pl-widget pl-float"><small><i></i>Billing limit available</small><b></b><div class="pl-pills"><span class="r">3 overdue</span><span class="y">2 due soon</span></div></div></div>
+        <div class="pv-shot pv-labeled-shot reveal pl-scene pl-step pl-detail" data-step="3"><span data-i="450" class="pv-live-badge b-violet" style="z-index:3;"><span class="pv-live-dot"></span>Paying the Bill</span><img class="pl-screen" src="paylater-bill-detail.webp" width="1648" height="1135" loading="lazy" alt="Bill detail page with STT list and payment options, all figures hidden"></div>
+        <div class="pv-shot pv-labeled-shot reveal pl-shot" data-step="3"><span data-i="450" class="pv-live-badge b-violet"><span class="pv-live-dot"></span>Paying the Bill</span>
+          <div class="gw-frame bp"><div class="gw-cap on"><i></i><span data-i="460">Bill information</span></div><div class="bp-card"><h5>Informasi</h5><div class="bp-grid"><div><small>Tagihan ID</small><span class="bp-bar" style="width:80%"></span></div><div><small>Tanggal terbit</small><span class="bp-bar" style="width:60%"></span></div><div><small>Estimasi jatuh tempo</small><em>8 hari lagi</em></div><div><small>Jatuh tempo</small><span class="bp-bar" style="width:64%"></span></div></div><div class="bp-note"><i>!</i>Diskon hangus jika melewati jatuh tempo</div></div><div class="gw-arrow" aria-hidden="true">&darr;</div><div class="gw-cap on"><i></i><span data-i="461">Choose how to pay</span></div><div class="bp-card"><div class="bp-head">Status tagihan<span class="bp-pill">Belum lunas</span></div><div class="bp-sub">Pilih pembayaran</div><div class="bp-opt off"><span class="ic s"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2.4"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18"/></svg></span><div>Saldo<small>Tidak mencukupi <span class="bp-bar" style="width:52px; height:8px; display:inline-block;"></span></small></div><span class="rd"></span></div><div class="bp-opt "><span class="ic ">BSI</span><div>BSI Virtual Account</div><span class="rd on"></span></div><div class="bp-opt "><span class="ic ">BCA</span><div>BCA Virtual Account</div><span class="rd"></span></div><div class="bp-opt "><span class="ic ">MDR</span><div>Mandiri Virtual Account</div><span class="rd"></span></div><div class="bp-more">Tutup &#8963;</div><div class="bp-sub">Detail</div><div class="bp-row">Total STT<span class="bp-bar" style="width:28px"></span></div><div class="bp-row">Total diskon yang diterima<span class="bp-bar" style="width:70px"></span></div><div class="bp-row t">Total tagihan<span class="bp-bar" style="width:90px"></span></div><div class="bp-btn">Bayar tagihan</div><div class="bp-btn o">Download tagihan (PDF)</div></div></div></div>
+        <p data-i="454" class="pl-note">Illustrative recreation. Real screens, figures, and terms are confidential.</p>
+      </div>
+    </div>
+    <div class="pv-project-intro" style="margin-top:-24px; margin-bottom:72px;">
+        <div data-i="463" class="pv-label">Internal side</div>
+        <h2 data-i="464" class="pv-project-title reveal">Tools for the Lion Parcel team</h2>
+        <p data-i="465" class="pv-text reveal">Pay later only works if the team can decide who gets credit, see who is using it, and follow up at the right time. I designed the internal side as well.</p>
+        <div class="p3-proc reveal" style="display:grid; gap:14px; margin-top:20px;">
+          <div class="p3-rc-item"><span class="p3-rc-n">01</span><div><strong data-i="466">Limit Setup</strong><p data-i="467">Gives each POS agent their starting limit. The criteria behind it are confidential, so they are not shown here.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">02</span><div><strong data-i="468">Pay-Later Monitoring</strong><p data-i="469">Shows which POS agents are using pay later and the status of their bills, so the team spots risk early.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">03</span><div><strong data-i="470">Follow-Up Access</strong><p data-i="471">Sets who on the team is allowed to follow up with each POS agent, so reminders come from the right person.</p></div></div>
+        </div>
+    </div>
+    <div class="p3-outcome">
+      <div class="pv-impact p3-impact reveal" style="margin-top:0;">
+        <div data-i="94" class="pv-worked">Impact</div>
+        <div data-i="455" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>2,500+ shipments booked on credit</div>
+        <div data-i="456" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>Zero bad debt since launch</div>
+        <div data-i="457" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>Designed end to end from scratch: agent limit, billing, and payment, plus internal limit setup, monitoring, and follow-up</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="vibeView" class="project3-view" style="display:none;">
+  <div class="pv-topbar wrap"><a data-i="154" href="#top" class="back-link">&larr; Back</a></div>
+  <div class="wrap">
+    <div data-i="473" class="pv-label">Vibe-coded Apps</div>
+    <h1 data-i="482" class="pv-title">Exercising product and design thinking beyond the canvas</h1>
+    <div class="pv-grid">
+      <div class="pv-col-main">
+        <div data-i="483" class="pv-meta-label">Background</div>
+        <p data-i="484" class="pv-text">Vibe coding is how I practise product and design thinking outside Figma. I pick an everyday problem, design the experience, and build it myself with AI until it is live and usable by real people. Shipping it myself keeps me honest about what works in a real browser, not just on a canvas.</p>
+      </div>
+      <div class="pv-col-side">
+        <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="485" class="pv-text">Product Designer &amp; AI builder</div></div>
+        <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div data-i="486" class="pv-text">Consumer apps &middot; Edtech, Beauty</div></div>
+      </div>
+    </div>
+
+    <div class="vc-proj">
+      <div class="vc-text">
+        <div data-i="81" class="pv-label">Project 01</div>
+        <h2>Wordly</h2>
+        <p data-i="487">Many people learn English words by reading a list, then forget them the next day. Reading alone does not build recall.</p>
+        <p data-i="488">Wordly turns every word into three steps: memorise it with its meaning and pronunciation, write it from the Indonesian meaning, then say it out loud into the microphone. Grammar lessons come with exercises, and test history stays on the device.</p>
+        <div class="vc-facts"><span data-i="489">487 words</span><span data-i="490">18 everyday topics</span><span data-i="491">28 grammar lessons</span></div>
+        <a class="vc-live" href="https://wordly-belajar.netlify.app/" target="_blank" rel="noopener"><span data-i="492">Visit live site</span> &#8599;</a>
+      </div>
+      <div class="vc-media">
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vibe-wordly.webp" width="2560" height="1600" loading="lazy" alt="Wordly home: memorise, write, then speak"></div></div>
+        <div class="vc-two"><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-topics.webp" width="2560" height="1500" loading="lazy" alt="Wordly topic picker with illustrated topics"></div></div><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-list.webp" width="2560" height="1500" loading="lazy" alt="Wordly word list with meaning, pronunciation, and writing practice"></div></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-grammar.webp" width="2560" height="1600" loading="lazy" alt="Wordly grammar lessons by level"></div></div>
+        <div class="vc-two"><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-test.webp" width="2560" height="1500" loading="lazy" alt="Wordly test onboarding asking for the learner name"></div></div><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-history.webp" width="2560" height="1500" loading="lazy" alt="Wordly test history stored on the device"></div></div></div>
+        <div class="vc-shot reveal"><div class="vc-phones"><div class="vc-phone"><img src="vibe-wordly-mobile.webp" width="1170" height="2532" loading="lazy" alt="Wordly on mobile: home"></div><div class="vc-phone"><img src="vc-wordly-m-topics.webp" width="1170" height="2532" loading="lazy" alt="Wordly on mobile: topics"></div></div></div>
+      </div>
+    </div>
+
+    <div class="vc-proj" style="margin-bottom:120px;">
+      <div class="vc-text">
+        <div data-i="101" class="pv-label">Project 02</div>
+        <h2>Selarasa</h2>
+        <p data-i="493">Choosing colours for clothes, makeup, and hijab is often guesswork, and a personal colour analysis session costs time and money.</p>
+        <p data-i="494">Selarasa gives a first answer in a minute. Scan your face or upload a photo, and it suggests your colour season, ten clothing colours, makeup and hijab shades, and colours to avoid, with a five-trait colour profile. It also suggests haircuts and hair colours, and turns everything into a detailed report you can print or save as PDF. The photo is processed on the device.</p>
+        <div class="vc-facts"><span data-i="495">AI face scan</span><span data-i="496">Processed on device</span><span data-i="497">Makeup &amp; hijab colours</span><span data-i="499">Printable report</span></div>
+        <a class="vc-live" href="https://selarasa.netlify.app/" target="_blank" rel="noopener"><span data-i="492">Visit live site</span> &#8599;</a>
+      </div>
+      <div class="vc-media">
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-scan.webp" width="2000" height="967" loading="lazy" alt="Selarasa result: Light Spring season with a five-trait colour profile"></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-colors.webp" width="2000" height="959" loading="lazy" alt="Selarasa: features read from the face and the colours to wear or avoid"></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-hair.webp" width="2000" height="959" loading="lazy" alt="Selarasa: haircut and hair colour suggestions for the face shape"></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-report.webp" width="2000" height="969" loading="lazy" alt="Selarasa detailed colour report"></div></div>
+        <div class="vc-shot reveal" style="padding:0;"><span data-i="498" class="vc-cap">Printable PDF report</span><div class="vc-sheets"><img src="vc-selarasa-pdf-1.webp" width="2277" height="3206" loading="lazy" alt="Selarasa PDF report: colour report summary"><img src="vc-selarasa-pdf-2.webp" width="2277" height="3228" loading="lazy" alt="Selarasa PDF report: before and after colour guide"><img src="vc-selarasa-pdf-6.webp" width="2278" height="3228" loading="lazy" alt="Selarasa PDF report: best colour palette"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="ft">
+  <div class="wrap ft-grid">
+    <div class="ft-id"><i class="ft-dot" aria-hidden="true"></i><div>SITI ZULIATUL FAIDAH<br><span data-i="500">PRODUCT DESIGNER</span><br>JAKARTA, ID<br><span id="ftTime">--:-- GMT+7</span></div></div>
+    <nav class="ft-col" aria-label="Profiles"><a class="ft-row" href="https://www.linkedin.com/in/siti-zuliatul-faidah/" target="_blank" rel="noopener"><span>LinkedIn</span><i aria-hidden="true">&#8599;</i></a><a class="ft-row" href="https://dribbble.com/sitizuliatulf" target="_blank" rel="noopener"><span>Dribbble</span><i aria-hidden="true">&#8599;</i></a><a class="ft-row" href="https://www.behance.net/sitizuliatulfaidah" target="_blank" rel="noopener"><span>Behance</span><i aria-hidden="true">&#8599;</i></a></nav>
+    <div class="ft-copy">&copy; 2026 Siti Zuliatul Faidah</div>
   </div>
 </footer>
 
@@ -1453,8 +1846,10 @@
     if(navExp){ navExp.classList.toggle('active', isExp); if(isExp){ navExp.setAttribute('aria-current', 'page'); } else { navExp.removeAttribute('aria-current'); } }
   }
   function route(){
-    var hash = location.hash, isProject = hash === '#project', isExp = hash === '#experience', isP3 = hash === '#project-3', isP2 = hash === '#project-2', isLQ = hash === '#landing-qubio', isLM = hash === '#landing-menu', isLQL = hash === '#landing-qubiql';
-    homeView.style.display = (isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL) ? 'none' : '';
+    var hash = location.hash, isProject = hash === '#project', isExp = hash === '#experience', isP3 = hash === '#project-3', isP2 = hash === '#project-2', isLQ = hash === '#landing-qubio', isLM = hash === '#landing-menu', isLQL = hash === '#landing-qubiql', isPL = hash === '#project-paylater', isVC = hash === '#vibe-coded';
+    homeView.style.display = (isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL || isPL || isVC) ? 'none' : '';
+    var vcView = document.getElementById('vibeView'); if(vcView){ vcView.style.display = isVC ? '' : 'none'; }
+    var plView = document.getElementById('paylaterView'); if(plView){ plView.style.display = isPL ? '' : 'none'; }
     var lqlView = document.getElementById('landingQubiqlView'); if(lqlView){ lqlView.style.display = isLQL ? '' : 'none'; }
     var lmView = document.getElementById('landingMenuView'); if(lmView){ lmView.style.display = isLM ? '' : 'none'; }
     var lqView = document.getElementById('landingQubioView'); if(lqView){ lqView.style.display = isLQ ? '' : 'none'; }
@@ -1463,7 +1858,7 @@
     if(project3View){ project3View.style.display = isP3 ? '' : 'none'; }
     if(project2View){ project2View.style.display = isP2 ? '' : 'none'; }
     setNav(isExp);
-    if(isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL){
+    if(isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL || isPL || isVC){
       window.scrollTo(0,0);
     } else {
       var id = location.hash.slice(1);
@@ -1914,5 +2309,10 @@
 })();
 </script>
 <script src="i18n.js"></script>
+<script>
+(function(){var el=document.getElementById('ftTime'); if(!el) return;
+function tick(){try{el.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Jakarta'}).format(new Date())+' GMT+7';}catch(e){}}
+tick(); setInterval(tick,30000);})();
+</script>
 </body>
 </html>
