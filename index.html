@@ -461,6 +461,32 @@
   .vibe-card .phone-stack .vb{flex:1 1 0; min-height:0; border-radius:18px; background:#F1F4FB;}
   .vibe-card .phone-stack .vb + .vb{margin-top:18px;}
   @media (max-width:720px){ .vibe-card .pt2-panel.vb{height:240px;} .vibe-card .phone-stack .vb{height:220px; flex:1 1 0;} .vibe-card .phone-stack .vb + .vb{margin-top:0;} .vb-tag{font-size:11px; padding:5px 9px; left:8px; bottom:8px;} .vb-tag span{display:none;} }
+
+  .vc-proj{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr); gap:56px; margin-top:96px; align-items:start;}
+  .vc-text{position:sticky; top:120px;}
+  .vc-text .pv-label{margin-bottom:10px;}
+  .vc-text h2{margin:0 0 18px; font-size:clamp(26px,2.6vw,34px); font-weight:800; letter-spacing:-.02em;}
+  .vc-text p{color:var(--ink); line-height:1.65; margin:0 0 14px; font-size:15.5px;}
+  .vc-facts{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 22px;}
+  .vc-facts span{font-size:12.5px; font-weight:700; padding:6px 11px; border-radius:999px; background:#F1F4FB; color:var(--ink);}
+  .vc-live{display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:999px; background:var(--ink); color:#fff; font-weight:700; font-size:14px; text-decoration:none;}
+  .vc-media{display:flex; flex-direction:column; gap:20px;}
+  .vc-shot{position:relative; overflow:hidden; border-radius:22px; background:#ECEEF3; padding:6% 6% 0;}
+  .vc-shot.pad{padding:6%;}
+  .vc-win{border-radius:12px 12px 0 0; overflow:hidden; background:#fff; border:1px solid #dfe2ea; border-bottom:none; box-shadow:0 20px 40px -26px rgba(30,34,60,.35);}
+  .vc-shot.pad .vc-win{border-radius:12px; border-bottom:1px solid #dfe2ea;}
+  .vc-win i{display:flex; gap:5px; padding:9px 12px; background:#f6f7fa; border-bottom:1px solid #eceef3;} .vc-win i b{width:8px; height:8px; border-radius:50%; background:#d6d9e1;}
+  .vc-win img{display:block; width:100%; height:auto;}
+  .vc-two{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .vc-two .vc-shot{padding:9% 0 0 9%;}
+  .vc-two .vc-win{border-radius:12px 0 0 0; border-right:none; height:100%;}
+  .vc-two .vc-win img{width:170%; max-width:none;}
+  .vc-phones{display:flex; justify-content:center; gap:6%; padding:7% 6% 0;}
+  .vc-phone{width:34%; border-radius:28px 28px 0 0; overflow:hidden; border:7px solid #1d1f27; border-bottom:none; box-shadow:0 20px 40px -24px rgba(30,34,60,.45);}
+  .vc-phone img{display:block; width:100%; height:auto; aspect-ratio:390/700; object-fit:cover; object-position:top;}
+  .vc-panels{display:flex; justify-content:center; gap:5%; padding:7% 6% 0;}
+  .vc-panels img{width:40%; height:auto; border-radius:14px 14px 0 0; border:1px solid #dfe2ea; border-bottom:none; box-shadow:0 20px 40px -24px rgba(30,34,60,.35); display:block; aspect-ratio:640/1100; object-fit:cover; object-position:top;}
+  @media (max-width:900px){ .vc-proj{grid-template-columns:1fr; gap:28px; margin-top:64px;} .vc-text{position:static;} .vc-two{grid-template-columns:1fr; gap:14px;} .vc-media{gap:14px;} .vc-phone{width:42%;} .vc-panels img{width:44%;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -931,8 +957,14 @@
       </div>
       </div>
     </a>
-    <div class="project-showcase vibe-card">
+    <a href="#vibe-coded" class="project-showcase vibe-card">
       <div class="showcase-visual pt-visual">
+        <div class="showcase-overlay">
+          <div class="vp-circle">
+            <span data-i="17" class="vp-line">View <span class="vp-arrow">↗</span></span>
+            <span data-i="18" class="vp-line">Project</span>
+          </div>
+        </div>
       <div class="pt-head">
         <div class="pt-head-main">
           <div class="pt-eyebrow"><span class="pt-num">05</span><span data-i="472" class="pt-lab">Side projects &middot; Built with AI</span><i class="pt-line"></i></div>
@@ -945,23 +977,23 @@
         </div>
       </div>
       <div class="pt-grid">
-        <a class="pt2-panel vb" href="https://wordly-belajar.netlify.app/" target="_blank" rel="noopener" aria-label="Open Wordly (opens in a new tab)">
+        <div class="pt2-panel vb">
           <div class="vb-win"><i><b></b><b></b><b></b></i><img src="vibe-wordly.webp" width="2560" height="1600" loading="lazy" alt="Wordly: learn everyday English vocabulary by memorising, writing, and speaking"></div>
-          <span class="vb-tag">Wordly <span data-i="479">&middot; English vocabulary</span> &#8599;</span>
-        </a>
+          <span class="vb-tag">Wordly <span data-i="479">&middot; English vocabulary</span></span>
+        </div>
         <div class="phone-stack">
-          <a class="vb" href="https://selarasa.netlify.app/" target="_blank" rel="noopener" aria-label="Open Selarasa (opens in a new tab)">
+          <div class="vb">
             <div class="vb-win" style="left:-22%; top:12%; width:130%;"><i><b></b><b></b><b></b></i><img src="vibe-selarasa.webp" width="2560" height="1600" loading="lazy" alt="Selarasa: AI personal color assistant that scans your face on device"></div>
-            <span class="vb-tag">Selarasa <span data-i="480">&middot; Personal color AI</span> &#8599;</span>
-          </a>
-          <a class="vb" href="https://wordly-belajar.netlify.app/" target="_blank" rel="noopener" aria-label="Open Wordly on mobile (opens in a new tab)">
+            <span class="vb-tag">Selarasa <span data-i="480">&middot; Personal color AI</span></span>
+          </div>
+          <div class="vb">
             <div class="vb-phone"><img src="vibe-wordly-mobile.webp" width="1170" height="2532" loading="lazy" alt="Wordly on mobile"></div>
-            <span class="vb-tag">Wordly <span data-i="481">&middot; Mobile</span> &#8599;</span>
-          </a>
+            <span class="vb-tag">Wordly <span data-i="481">&middot; Mobile</span></span>
+          </div>
         </div>
       </div>
       </div>
-    </div>
+    </a>
     </div>
     <div class="wk-panel" data-wk-panel="landing" hidden>
     <a href="#landing-qubiql" class="project-showcase">
@@ -1695,6 +1727,57 @@
   </div>
 </div>
 
+<div id="vibeView" class="project3-view" style="display:none;">
+  <div class="pv-topbar wrap"><a data-i="154" href="#top" class="back-link">&larr; Back</a></div>
+  <div class="wrap">
+    <div data-i="473" class="pv-label">Vibe-coded Apps</div>
+    <h1 data-i="482" class="pv-title">Exercising product and design thinking beyond the canvas</h1>
+    <div class="pv-grid">
+      <div class="pv-col-main">
+        <div data-i="483" class="pv-meta-label">Background</div>
+        <p data-i="484" class="pv-text">Vibe coding is how I practise product and design thinking outside Figma. I pick an everyday problem, design the experience, and build it myself with AI until it is live and usable by real people. Shipping it myself keeps me honest about what works in a real browser, not just on a canvas.</p>
+      </div>
+      <div class="pv-col-side">
+        <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="485" class="pv-text">Product Designer &amp; AI builder</div></div>
+        <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div data-i="486" class="pv-text">Consumer apps &middot; Edtech, Beauty</div></div>
+      </div>
+    </div>
+
+    <div class="vc-proj">
+      <div class="vc-text">
+        <div data-i="81" class="pv-label">Project 01</div>
+        <h2>Wordly</h2>
+        <p data-i="487">Many people learn English words by reading a list, then forget them the next day. Reading alone does not build recall.</p>
+        <p data-i="488">Wordly turns every word into three steps: memorise it with its meaning and pronunciation, write it from the Indonesian meaning, then say it out loud into the microphone. Grammar lessons come with exercises, and test history stays on the device.</p>
+        <div class="vc-facts"><span data-i="489">487 words</span><span data-i="490">18 everyday topics</span><span data-i="491">28 grammar lessons</span></div>
+        <a class="vc-live" href="https://wordly-belajar.netlify.app/" target="_blank" rel="noopener"><span data-i="492">Visit live site</span> &#8599;</a>
+      </div>
+      <div class="vc-media">
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vibe-wordly.webp" width="2560" height="1600" loading="lazy" alt="Wordly home: memorise, write, then speak"></div></div>
+        <div class="vc-two"><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-topics.webp" width="2560" height="1500" loading="lazy" alt="Wordly topic picker with illustrated topics"></div></div><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-list.webp" width="2560" height="1500" loading="lazy" alt="Wordly word list with meaning, pronunciation, and writing practice"></div></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-grammar.webp" width="2560" height="1600" loading="lazy" alt="Wordly grammar lessons by level"></div></div>
+        <div class="vc-two"><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-test.webp" width="2560" height="1500" loading="lazy" alt="Wordly test onboarding asking for the learner name"></div></div><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-history.webp" width="2560" height="1500" loading="lazy" alt="Wordly test history stored on the device"></div></div></div>
+        <div class="vc-shot reveal"><div class="vc-phones"><div class="vc-phone"><img src="vibe-wordly-mobile.webp" width="1170" height="2532" loading="lazy" alt="Wordly on mobile: home"></div><div class="vc-phone"><img src="vc-wordly-m-topics.webp" width="1170" height="2532" loading="lazy" alt="Wordly on mobile: topics"></div></div></div>
+      </div>
+    </div>
+
+    <div class="vc-proj" style="margin-bottom:120px;">
+      <div class="vc-text">
+        <div data-i="101" class="pv-label">Project 02</div>
+        <h2>Selarasa</h2>
+        <p data-i="493">Choosing colours for clothes, makeup, and hijab is often guesswork, and a personal colour analysis session costs time and money.</p>
+        <p data-i="494">Selarasa gives a first answer in a minute. Scan your face or upload a photo, and it suggests your colour season, ten clothing colours, makeup and hijab shades, and colours to avoid, with a five-trait colour profile. The photo is processed on the device.</p>
+        <div class="vc-facts"><span data-i="495">AI face scan</span><span data-i="496">Processed on device</span><span data-i="497">Makeup &amp; hijab colours</span></div>
+        <a class="vc-live" href="https://selarasa.netlify.app/" target="_blank" rel="noopener"><span data-i="492">Visit live site</span> &#8599;</a>
+      </div>
+      <div class="vc-media">
+        <div class="vc-shot pad reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vibe-selarasa.webp" width="2560" height="1600" loading="lazy" alt="Selarasa: scan, result, and colour profile panels"></div></div>
+        <div class="vc-shot reveal"><div class="vc-panels"><img src="vc-selarasa-result.webp" width="640" height="1460" loading="lazy" alt="Selarasa result panel"><img src="vc-selarasa-profile.webp" width="585" height="1460" loading="lazy" alt="Selarasa colour profile and how-to panel"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <span>© 2026 Siti Zuliatul Faidah</span>
@@ -1739,8 +1822,9 @@
     if(navExp){ navExp.classList.toggle('active', isExp); if(isExp){ navExp.setAttribute('aria-current', 'page'); } else { navExp.removeAttribute('aria-current'); } }
   }
   function route(){
-    var hash = location.hash, isProject = hash === '#project', isExp = hash === '#experience', isP3 = hash === '#project-3', isP2 = hash === '#project-2', isLQ = hash === '#landing-qubio', isLM = hash === '#landing-menu', isLQL = hash === '#landing-qubiql', isPL = hash === '#project-paylater';
-    homeView.style.display = (isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL || isPL) ? 'none' : '';
+    var hash = location.hash, isProject = hash === '#project', isExp = hash === '#experience', isP3 = hash === '#project-3', isP2 = hash === '#project-2', isLQ = hash === '#landing-qubio', isLM = hash === '#landing-menu', isLQL = hash === '#landing-qubiql', isPL = hash === '#project-paylater', isVC = hash === '#vibe-coded';
+    homeView.style.display = (isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL || isPL || isVC) ? 'none' : '';
+    var vcView = document.getElementById('vibeView'); if(vcView){ vcView.style.display = isVC ? '' : 'none'; }
     var plView = document.getElementById('paylaterView'); if(plView){ plView.style.display = isPL ? '' : 'none'; }
     var lqlView = document.getElementById('landingQubiqlView'); if(lqlView){ lqlView.style.display = isLQL ? '' : 'none'; }
     var lmView = document.getElementById('landingMenuView'); if(lmView){ lmView.style.display = isLM ? '' : 'none'; }
@@ -1750,7 +1834,7 @@
     if(project3View){ project3View.style.display = isP3 ? '' : 'none'; }
     if(project2View){ project2View.style.display = isP2 ? '' : 'none'; }
     setNav(isExp);
-    if(isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL || isPL){
+    if(isProject || isExp || isP3 || isP2 || isLQ || isLM || isLQL || isPL || isVC){
       window.scrollTo(0,0);
     } else {
       var id = location.hash.slice(1);
