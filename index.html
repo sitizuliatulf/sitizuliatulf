@@ -507,6 +507,66 @@
   .ft-copy{grid-column:1/-1; font-size:12px; color:var(--muted); letter-spacing:.04em;}
   @media (max-width:860px){ footer.ft .ft-grid{grid-template-columns:1fr minmax(0,300px);} }
   @media (max-width:520px){ footer.ft .ft-grid{grid-template-columns:1fr; gap:0;} .ft-id{margin-bottom:24px;} .ft-col + .ft-col{border-top:none;} .ft-copy{margin-top:24px;} }
+
+  .ai-wf{margin-top:88px;}
+  .ai-wf h2{margin:6px 0 10px; font-size:clamp(26px,2.8vw,36px); font-weight:800; letter-spacing:-.02em;}
+  .ai-wf > p{max-width:720px; color:var(--ink); line-height:1.65; margin:0 0 28px;}
+  .ai-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px;}
+  .ai-card{background:#F6F7FA; border:1px solid var(--line); border-radius:20px; padding:22px 22px 20px; display:flex; flex-direction:column; gap:10px;}
+  .ai-card .ai-top{display:flex; align-items:center; gap:12px;}
+  .ai-card .ai-n{width:34px; height:34px; border-radius:50%; background:#fff2ea; color:var(--accent); font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .ai-card h3{margin:0; font-size:18px; font-weight:800;}
+  .ai-card p{margin:0; line-height:1.6; font-size:14.5px; color:var(--ink);}
+  .ai-card .ai-me{font-size:13.5px; color:var(--muted);}
+  .ai-card .ai-me b{color:var(--ink);}
+  .ai-card .vc-facts{margin:4px 0 0;}
+  .ai-card .vc-facts span{background:#fff;}
+  .vc-ai{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0 0 18px; font-size:12.5px; font-weight:700; color:var(--muted);}
+  .vc-ai span{padding:5px 10px; border-radius:999px; background:#fff2ea; color:var(--accent);}
+  @media (max-width:900px){ .ai-grid{grid-template-columns:1fr;} .ai-wf{margin-top:64px;} }
+
+  .other-work{margin-top:110px; padding-top:56px; border-top:1px solid var(--line);}
+  .other-work .work-title{margin-bottom:8px;}
+  .ow-sub{color:var(--muted); margin:0 0 32px; font-size:15px;}
+  .ow-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:24px;}
+  .ow-grid .project-showcase{margin:0 !important; background:transparent; border-radius:20px; overflow:visible;}
+  .ow-grid .showcase-visual.pt-visual{display:flex; flex-direction:column;}
+  .ow-grid .pt-grid{order:1; aspect-ratio:16/11; border-radius:18px; overflow:hidden; display:block !important;}
+  .ow-grid .pt-grid .pt2-panel{height:100%; border-radius:18px; transition:transform .5s cubic-bezier(.22,1,.36,1);}
+  .ow-grid .project-showcase:hover .pt2-panel{transform:scale(1.02);}
+  .ow-grid .pt-head{order:2; padding:16px 4px 0; gap:0; flex-direction:column;}
+  .ow-grid .pt-eyebrow{margin-bottom:6px;}
+  .ow-grid .pt-eyebrow .pt-lab{font-size:11px; letter-spacing:.16em;}
+  .ow-grid .pt-eyebrow .pt-line{display:none;}
+  .ow-grid .pt-h{font-size:17px; line-height:1.3; margin:0;}
+  .ow-grid .pt-d,.ow-grid .pt-meta{display:none;}
+  .ow-grid .showcase-overlay{bottom:auto; height:auto; aspect-ratio:16/11;}
+  .ow-grid .vp-circle{width:96px !important; max-width:96px; font-size:11px;}
+  .ow-grid .vp-circle .vp-line{font-size:11px; letter-spacing:.12em;}
+  .ow-grid .showcase-visual::after{border-radius:18px; bottom:auto; aspect-ratio:16/11;}
+  .other-work .pt-num{display:none;}
+  @media (max-width:900px){ .ow-grid{grid-template-columns:1fr;} .other-work{margin-top:72px; padding-top:40px;} }
+
+  /* Page transitions */
+  .route-bar{position:fixed; left:0; top:0; height:3px; width:100%; z-index:9999; pointer-events:none; background:linear-gradient(90deg,var(--accent),#ffb38f); transform:scaleX(0); transform-origin:left; opacity:0;}
+  .route-bar.go{animation:routeBar .6s cubic-bezier(.22,1,.36,1) forwards;}
+  @keyframes routeBar{0%{transform:scaleX(0); opacity:1;} 70%{transform:scaleX(1); opacity:1;} 100%{transform:scaleX(1); opacity:0;}}
+  .project-showcase.is-opening{transform:scale(.975) !important; transition:transform .22s ease;}
+  .project-showcase.is-opening .showcase-visual::after{background:rgba(255,90,45,.08) !important;}
+  .view-in .pv-topbar,.view-in .pv-label,.view-in .pv-title,.view-in .pv-grid,.view-in .pv-project-intro,.view-in .ai-wf,.view-in .vc-proj:first-of-type,.view-in .xp{animation:viewUp .7s cubic-bezier(.22,1,.36,1) both;}
+  .view-in .pv-topbar{animation-delay:0s;}
+  .view-in .pv-label{animation-delay:.05s;}
+  .view-in .pv-title{animation-delay:.1s;}
+  .view-in .pv-grid{animation-delay:.2s;}
+  .view-in .pv-project-intro,.view-in .ai-wf,.view-in .vc-proj:first-of-type{animation-delay:.3s;}
+  .view-in .pl-hero{animation:viewZoom .9s cubic-bezier(.22,1,.36,1) .25s both;}
+  .home-in{animation:homeFade .5s ease both;}
+  @keyframes viewUp{from{opacity:0; transform:translateY(28px);} to{opacity:1; transform:none;}}
+  @keyframes viewZoom{from{opacity:0; transform:translateY(24px) scale(.97);} to{opacity:1; transform:none;}}
+  @keyframes homeFade{from{opacity:0;} to{opacity:1;}}
+  .back-link{transition:transform .2s ease, box-shadow .2s ease;}
+  .back-link:hover{transform:translateX(-4px);}
+  @media (prefers-reduced-motion: reduce){ .route-bar,.view-in *,.home-in{animation:none !important;} .project-showcase.is-opening{transform:none !important;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -828,10 +888,6 @@
 <section class="section" id="work">
   <div class="wrap">
     <h2 data-i="370" class="work-title">Released projects</h2>
-    <div class="tn-pill wk-tabs" role="tablist" aria-label="Work">
-      <button class="tn-item active" type="button" role="tab" aria-selected="true" data-wk="cases" data-i="360">Case Studies of Projects</button>
-      <button class="tn-item" type="button" role="tab" aria-selected="false" data-wk="landing" data-i="361">Landing Page</button>
-    </div>
     <div class="wk-panel" data-wk-panel="cases">
     <a href="#project" class="project-showcase">
       <div class="showcase-visual pt-visual">
@@ -921,7 +977,7 @@
       <div class="pt-head">
         <div class="pt-head-main">
           <div class="pt-eyebrow"><span class="pt-num">03</span><span data-i="34" class="pt-lab">AI product</span><i class="pt-line"></i></div>
-          <div data-i="35" class="pt-h">Qubio AI Productivity Experience</div>
+          <div data-i="35" class="pt-h">Qubiql AI Productivity Experience</div>
           <p data-i="36" class="pt-d">Building an AI productivity experience is more than designing a chatbot.</p>
         </div>
         <div class="pt-meta">
@@ -930,10 +986,10 @@
         </div>
       </div>
       <div class="pt-grid">
-        <div class="pt2-panel" style="overflow:hidden;"><iframe src="qubio-goal-builder.html" title="Qubio goal builder preview" loading="lazy" tabindex="-1" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none;"></iframe></div>
+        <div class="pt2-panel" style="overflow:hidden;"><iframe src="qubio-goal-builder.html" title="Qubiql goal builder preview" loading="lazy" tabindex="-1" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none;"></iframe></div>
         <div class="phone-stack">
-          <div class="pt2-dummy" style="position:relative; overflow:hidden;"><img src="qubio-ai-coach.png" alt="Qubio AI Coach: AI Assistant with assessment summary, recommended solution, and key features" loading="lazy" style="position:absolute; inset:12px 0 0 0; width:100%; height:calc(100% - 12px); object-fit:contain; object-position:center bottom; pointer-events:none;"></div>
-          <div class="pt2-dummy" style="position:relative; overflow:hidden; align-items:flex-start;"><img src="qubio-create-goal.png" alt="Qubio Create new goal sheet with AI-recommended categories" loading="lazy" style="position:absolute; top:14px; left:50%; transform:translateX(-50%); width:56%; height:auto; pointer-events:none;"></div>
+          <div class="pt2-dummy" style="position:relative; overflow:hidden;"><img src="qubio-ai-coach.png" alt="Qubiql AI Coach: AI Assistant with assessment summary, recommended solution, and key features" loading="lazy" style="position:absolute; inset:12px 0 0 0; width:100%; height:calc(100% - 12px); object-fit:contain; object-position:center bottom; pointer-events:none;"></div>
+          <div class="pt2-dummy" style="position:relative; overflow:hidden; align-items:flex-start;"><img src="qubio-create-goal.png" alt="Qubiql Create new goal sheet with AI-recommended categories" loading="lazy" style="position:absolute; top:14px; left:50%; transform:translateX(-50%); width:56%; height:auto; pointer-events:none;"></div>
         </div>
       </div>
       </div>
@@ -964,7 +1020,7 @@
             <span class="pt-ring"></span>
             <span class="pt-spark s1">&#10022;</span><span class="pt-spark s2">&#10022;</span><span class="pt-spark s3">&#10022;</span>
             <div class="pt-phone"><div class="pt-phone-in"><img class="td-scroll" src="tokodistributor-benefit.jpg" alt="" loading="lazy"></div></div>
-            <div class="pt-card"><i class="pt-ic">&#8599;</i><div><b data-i="44">+20% followed up to join Premium</b><span data-i="45">Premium Reseller Conversion</span></div></div>
+            <div class="pt-card"><i class="pt-ic">&#8599;</i><div><b data-i="44">+20% Premium sign-ups</b><span data-i="45">Premium Reseller Conversion</span></div></div>
             <div class="pt-card"><i class="pt-ic">&#8644;</i><div><b data-i="46">Real-time stock sync</b><span>Tokodistributor &#8644; TikTok Seller</span></div></div>
             <div class="pt-card"><i class="pt-ic">&#8599;</i><div><b data-i="48">+17% Premium Reseller interest</b><span data-i="49">in 3 months</span></div></div>
             <div class="pt-card"><i class="pt-ic">&#9635;</i><div><b data-i="50">3 benefit banners</b><span data-i="51">Premium Reseller Guide</span></div></div>
@@ -977,7 +1033,11 @@
       </div>
       </div>
     </a>
-    <a href="#vibe-coded" class="project-showcase vibe-card">
+    </div>
+    <div class="other-work">
+      <h2 data-i="560" class="work-title">Other work</h2>
+      <p data-i="561" class="ow-sub">Side projects and landing pages. Smaller in scope, shown for craft and range.</p>
+    <a href="#vibe-coded" class="project-showcase vibe-card ow-wide">
       <div class="showcase-visual pt-visual">
         <div class="showcase-overlay">
           <div class="vp-circle">
@@ -989,7 +1049,7 @@
         <div class="pt-head-main">
           <div class="pt-eyebrow"><span class="pt-num">05</span><span data-i="472" class="pt-lab">Side projects &middot; Built with AI</span><i class="pt-line"></i></div>
           <div data-i="473" class="pt-h">Vibe-coded Apps</div>
-          <p data-i="474" class="pt-d">Exercising product and design thinking beyond the canvas: two consumer web apps I designed and built end to end with AI. Both are live.</p>
+          <p data-i="474" class="pt-d">Exercising product and design thinking beyond the canvas: two consumer web apps I designed and built end to end with AI, including how I use AI in my workflow. Both are live.</p>
         </div>
         <div class="pt-meta">
           <div class="pt-meta-item"><span data-i="475" class="pt-meta-lab">Type</span><span data-i="476" class="pt-meta-val">Web app &middot; Consumers</span></div>
@@ -1014,8 +1074,7 @@
       </div>
       </div>
     </a>
-    </div>
-    <div class="wk-panel" data-wk-panel="landing" hidden>
+      <div class="ow-grid">
     <a href="#landing-qubiql" class="project-showcase">
       <div class="showcase-visual pt-visual">
         <div class="showcase-overlay">
@@ -1052,8 +1111,8 @@
       <div class="pt-head">
         <div class="pt-head-main">
           <div class="pt-eyebrow"><span class="pt-num">02</span><span data-i="350" class="pt-lab">Landing page</span><i class="pt-line"></i></div>
-          <div data-i="351" class="pt-h">Qubio Website Landing Page</div>
-          <p data-i="352" class="pt-d">Designed and developed a landing page for Qubio, an AI assistant that supports users with interactive chat, quick search, creative ideas, and daily productivity.</p>
+          <div data-i="351" class="pt-h">Qubiql AI Assistant Landing Page</div>
+          <p data-i="352" class="pt-d">Designed and developed a landing page for the Qubiql AI assistant (formerly Qubio) that supports users with interactive chat, quick search, creative ideas, and daily productivity.</p>
         </div>
         <div class="pt-meta">
           <div class="pt-meta-item"><span data-i="22" class="pt-meta-lab">Company</span><span class="pt-meta-val">DesktopIP</span></div>
@@ -1061,7 +1120,7 @@
         </div>
       </div>
       <div class="pt-grid" style="grid-template-columns:minmax(0,1fr);">
-        <div class="pt2-panel" style="overflow:hidden;"><img src="qubio-landing.jpg" width="2400" height="1800" alt="Qubio website landing page: home hero, built-in AI and goal creation sections" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top center;"></div>
+        <div class="pt2-panel" style="overflow:hidden;"><img src="qubio-landing.jpg" width="2400" height="1800" alt="Qubiql website landing page: home hero, built-in AI and goal creation sections" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top center;"></div>
       </div>
       </div>
     </a>
@@ -1089,6 +1148,7 @@
       </div>
       </div>
     </a>
+      </div>
     </div>
   </div>
 </section>
@@ -1155,6 +1215,11 @@
           </li>
         </ol>
         <p data-i="93" class="pv-text reveal">Together, these improvements created a more connected route experience—from understanding the route to choosing the next stop and navigating to the destination.</p>
+        <div class="dd-card reveal">
+            <span data-i="550" class="dd-badge"><i></i>Data behind the decision</span>
+            <h3 data-i="551" class="dd-title">Fix the address first, then the route</h3>
+            <p data-i="552" class="dd-desc">Operations flagged that many POS were missing their daily pickup and delivery targets, which differ by location, from a handful of packages to 20 or more. Their weekly reports kept pointing to the same cause: &ldquo;address not found&rdquo; at 2.5%, with couriers reporting that the address customers entered did not match the real location. So I focused the redesign on finding the address, not only on ordering stops. Against a 1.5% target, &ldquo;address not found&rdquo; dropped to 1.32% after launch.</p>
+          </div>
         <div class="pv-impact reveal">
           <div data-i="94" class="pv-worked">Impact</div>
           <div data-i="95" class="pv-impact-item"><span class="pv-impact-ic">↗</span>Reduced &ldquo;address not found&rdquo; cases from 2.5% to 1.32% (target 1.50%)</div>
@@ -1348,8 +1413,9 @@
           <div data-i="303" class="xp-co">Lion Parcel <i class="dot-sep"></i> Agent Tools, Driver App &amp; Internal Operations</div>
           <p data-i="304" class="xp-desc">Designing end-to-end products across First Mile, Last Mile, and internal operations, from research to production.</p>
           <ul class="xp-points">
-            <li data-i="305">Designed the core shipment booking flow, pickup, and invoice management, from separate domestic and international journeys to corporate billing</li>
-            <li data-i="306">Built an agent pay-later feature from scratch, with 2,500+ shipments booked on credit</li>
+            <li data-i="305">Redesigned the shipment booking flow with separate domestic and international journeys, cutting booking time from 80s to under 50s per shipment and booking errors by 20%, validated with 6 POS agents</li>
+            <li data-i="503">Reduced &ldquo;address not found&rdquo; cases from 2.5% to 1.32% and courier-cancelled pickups from 7.6% to 4.8% with geolocation-based route recommendations and saved customer locations for last-mile couriers</li>
+            <li data-i="306">Built an agent pay-later feature from scratch: 2,500+ shipments booked on credit with zero bad debt</li>
             <li data-i="307">Created a scalable Driver App design system aligned with the new brand identity, and extended it across other internal mobile tools</li>
           </ul>
         </div>
@@ -1359,7 +1425,7 @@
         <div class="xp-body">
           <h2 class="xp-role">Product Designer (Sole Designer)</h2>
           <div data-i="309" class="xp-co">Desktop IP <i class="dot-sep"></i> AI Productivity</div>
-          <p data-i="310" class="xp-desc">Designed Qubio, an AI productivity app on web and mobile, as the only designer, from research to launch.</p>
+          <p data-i="310" class="xp-desc">Designed Qubiql (formerly Qubio), an AI productivity app on web and mobile, as the only designer, from research to launch.</p>
           <ul class="xp-points">
             <li data-i="311">Designed the app and its AI workflows from scratch, including AI analysis and AI-generated responses, reaching 1,000+ users and 50,000+ to-dos</li>
             <li data-i="312">Ran user testing and onboarding sessions with early users to validate AI experiences and guide design iterations</li>
@@ -1388,11 +1454,11 @@
   <div class="pv-topbar wrap"><a data-i="154" href="#top" class="back-link">&larr; Back</a></div>
   <div class="wrap">
     <div data-i="341" class="pv-label">Landing page</div>
-    <h1 data-i="330" class="pv-title">Qubio Website Landing Page</h1>
+    <h1 data-i="330" class="pv-title">Qubiql AI Assistant Landing Page</h1>
     <div class="pv-grid">
       <div class="pv-col-main">
         <div data-i="125" class="pv-meta-label">Overview</div>
-        <p data-i="391" class="pv-text lp-just">Designed and developed a landing page for Qubio, an AI assistant that supports users with interactive chat, quick search, creative ideas, and daily productivity.</p>
+        <p data-i="391" class="pv-text lp-just">Designed and developed a landing page for the Qubiql AI assistant (formerly Qubio) that supports users with interactive chat, quick search, creative ideas, and daily productivity.</p>
         <div class="pv-block lp-siterow"><span data-i="392" class="pv-meta-label">Website</span><a class="xp-link lp-site" href="https://qubiql.com/qubio-ai" target="_blank" rel="noopener">qubiql.com/qubio-ai <span class="vp-arrow">&#8599;</span></a></div>
       </div>
       <div class="pv-col-side">
@@ -1400,8 +1466,8 @@
         <div class="pv-block"><div data-i="342" class="pv-meta-label">Industry</div><div data-i="331" class="pv-text">AI Productivity</div></div>
       </div>
     </div>
-    <img class="lp-full" src="qubio-landing.jpg" width="2400" height="1800" alt="Qubio website landing page">
-    <img class="lp-full lp-full-2" src="qubio-landing-2.jpg" width="2400" height="1800" loading="lazy" alt="Qubio website landing page: more sections">
+    <img class="lp-full" src="qubio-landing.jpg" width="2400" height="1800" alt="Qubiql website landing page">
+    <img class="lp-full lp-full-2" src="qubio-landing-2.jpg" width="2400" height="1800" loading="lazy" alt="Qubiql website landing page: more sections">
   </div>
 </div>
 
@@ -1452,12 +1518,12 @@
   <div class="pv-topbar wrap"><a data-i="154" href="#top" class="back-link">&larr; Back</a></div>
   <div class="wrap">
     <div class="pv-label">DesktopIP</div>
-    <h1 data-i="35" class="pv-title">Qubio AI Productivity Experience</h1>
+    <h1 data-i="35" class="pv-title">Qubiql AI Productivity Experience</h1>
     <div class="pv-grid">
       <div class="pv-col-main">
         <div data-i="125" class="pv-meta-label">Overview</div>
         <p data-i="165" class="pv-text">Building an AI productivity experience is more than designing a chatbot. The challenge was understanding how people actually want AI to fit into their daily workflow.</p>
-        <p data-i="423" class="pv-text">Qubio is the AI assistant inside Qubiql, the productivity app I designed as the sole designer at DesktopIP.</p>
+        <p data-i="423" class="pv-text">Qubiql (formerly Qubio) is the AI productivity app I designed as the sole designer at DesktopIP.</p>
       </div>
       <div class="pv-col-side">
         <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div class="pv-text">AI</div></div>
@@ -1468,7 +1534,7 @@
         <div data-i="81" class="pv-label">Project 01</div>
         <h2 data-i="166" class="pv-project-title reveal">AI-Powered Productivity Workflow</h2>
         <p data-i="167" class="pv-text reveal">I conducted user research and usability testing to understand how users set goals, manage tasks, and build productivity habits.</p>
-        <p data-i="168" class="pv-text reveal">I designed Qubio from 0 to launch, connecting personalized gamification, daily productivity tracking, and an AI-powered template community into one cohesive experience.</p>
+        <p data-i="168" class="pv-text reveal">I designed Qubiql from 0 to launch, connecting personalized gamification, daily productivity tracking, and an AI-powered template community into one cohesive experience.</p>
     </div>
     <div class="pv-project" style="margin-top:56px; margin-bottom:200px;">
       <div class="pv-project-text">
@@ -1501,17 +1567,17 @@
         </div>
       </div>
       <div class="pv-project-media">
-        <div class="pv-shot pv-labeled-shot reveal" data-step="1" style="height:500px; background:#F1F4FB;"><span data-i="180" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Personalized Gamification</span><iframe src="qubio-chat.html" title="Qubio onboarding chat prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
-        <div class="pv-shot pv-labeled-shot reveal" data-step="1" style="height:500px; background:#F1F4FB;"><span data-i="180" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Personalized Gamification</span><iframe src="qubio-results.html" title="Qubio results prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
-        <div class="pv-shot pv-labeled-shot reveal" data-step="2" style="height:500px; background:#F1F4FB;"><span data-i="181" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Daily Productivity Dashboard</span><iframe src="qubio-dashboard-tour.html" title="Qubio dashboard tour prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
-        <div class="pv-shot pv-labeled-shot reveal" data-step="2" style="height:500px; background:#F1F4FB;"><span data-i="181" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Daily Productivity Dashboard</span><iframe src="qubio-dashboards.html" title="Qubio dashboards prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
-        <div class="pv-shot pv-labeled-shot reveal" data-step="3" style="height:500px; background:#F1F4FB;"><span data-i="182" class="pv-live-badge b-violet"><span class="pv-live-dot"></span>Template Community</span><iframe src="qubio-templates.html" title="Qubio template community prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="1" style="height:500px; background:#F1F4FB;"><span data-i="180" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Personalized Gamification</span><iframe src="qubio-chat.html" title="Qubiql onboarding chat prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="1" style="height:500px; background:#F1F4FB;"><span data-i="180" class="pv-live-badge b-orange"><span class="pv-live-dot"></span>Personalized Gamification</span><iframe src="qubio-results.html" title="Qubiql results prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="2" style="height:500px; background:#F1F4FB;"><span data-i="181" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Daily Productivity Dashboard</span><iframe src="qubio-dashboard-tour.html" title="Qubiql dashboard tour prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="2" style="height:500px; background:#F1F4FB;"><span data-i="181" class="pv-live-badge b-blue"><span class="pv-live-dot"></span>Daily Productivity Dashboard</span><iframe src="qubio-dashboards.html" title="Qubiql dashboards prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="3" style="height:500px; background:#F1F4FB;"><span data-i="182" class="pv-live-badge b-violet"><span class="pv-live-dot"></span>Template Community</span><iframe src="qubio-templates.html" title="Qubiql template community prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
       </div>
     </div>
     <div class="pv-project-intro">
         <div data-i="101" class="pv-label">Project 02</div>
         <h2 data-i="183" class="pv-project-title reveal">AI Chat &amp; Interaction</h2>
-        <p data-i="184" class="pv-text reveal">Qubio goes beyond answering questions. It acts as a personal productivity assistant, helping users manage tasks, goals, and reminders through conversation.</p>
+        <p data-i="184" class="pv-text reveal">Qubiql goes beyond answering questions. It acts as a personal productivity assistant, helping users manage tasks, goals, and reminders through conversation.</p>
         <p data-i="185" class="pv-text reveal">I designed the AI experience and validated the interaction through user research and usability testing, iterating the experience based on direct user feedback.</p>
     </div>
     <div class="pv-project" style="margin-top:56px; margin-bottom:200px;">
@@ -1521,23 +1587,23 @@
           <ol class="pv-stepper">
             <li class="pv-step active" data-go="1">
               <div class="pv-step-head"><span class="pv-step-num">01</span><span data-i="186" class="pv-step-title">Conversational AI Experience</span></div>
-              <div class="pv-step-body"><div><p data-i="187" class="pv-step-desc">Designed chat, response states, actions, and interaction patterns for Qubio.</p></div></div>
+              <div class="pv-step-body"><div><p data-i="187" class="pv-step-desc">Designed chat, response states, actions, and interaction patterns for Qubiql.</p></div></div>
             </li>
             <li class="pv-step" data-go="2">
               <div class="pv-step-head"><span class="pv-step-num">02</span><span data-i="188" class="pv-step-title">AI Planner</span></div>
-              <div class="pv-step-body"><div><p data-i="189" class="pv-step-desc">Designed an AI planner where users choose from a set of categories, and Qubio helps analyze what they should do next, turning the result into goals or tasks.</p><p data-i="190" class="pv-step-desc">Connected conversations with actions such as task reminders, goal creation, and goal duplication.</p></div></div>
+              <div class="pv-step-body"><div><p data-i="189" class="pv-step-desc">Designed an AI planner where users choose from a set of categories, and Qubiql helps analyze what they should do next, turning the result into goals or tasks.</p><p data-i="190" class="pv-step-desc">Connected conversations with actions such as task reminders, goal creation, and goal duplication.</p></div></div>
             </li>
           </ol>
           <div class="pv-impact reveal">
             <div data-i="94" class="pv-worked">Impact</div>
-            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="191">Shipped as Qubio&rsquo;s core assistant, used by 1,003 users</strong></div>
+            <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="191">Shipped as Qubiql&rsquo;s core AI assistant, used by 1,003 users</strong></div>
             <div class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span><strong data-i="192">Chat connected to real actions: reminders, goal creation, and goal duplication</strong></div>
           </div>
         </div>
       </div>
       <div class="pv-project-media">
-        <div class="pv-shot pv-labeled-shot reveal" data-step="1" style="height:500px; background:#F1F4FB;"><span data-i="193" class="pv-live-badge b-green"><span class="pv-live-dot"></span>Conversational AI Experience</span><iframe src="qubio-ai-assistant.html" title="Qubio AI assistant prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
-        <div class="pv-shot pv-labeled-shot reveal" data-step="2" style="height:500px; background:#F1F4FB;"><span data-i="194" class="pv-live-badge b-pink"><span class="pv-live-dot"></span>AI Planner</span><iframe src="qubio-goal-builder.html" title="Qubio goal builder prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="1" style="height:500px; background:#F1F4FB;"><span data-i="193" class="pv-live-badge b-green"><span class="pv-live-dot"></span>Conversational AI Experience</span><iframe src="qubio-ai-assistant.html" title="Qubiql AI assistant prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
+        <div class="pv-shot pv-labeled-shot reveal" data-step="2" style="height:500px; background:#F1F4FB;"><span data-i="194" class="pv-live-badge b-pink"><span class="pv-live-dot"></span>AI Planner</span><iframe src="qubio-goal-builder.html" title="Qubiql goal builder prototype" loading="lazy" style="display:block; width:100%; height:100%; border:0;"></iframe></div>
               </div>
     </div>
   </div>
@@ -1589,7 +1655,7 @@
           </ol>
           <div class="pv-impact reveal">
             <div data-i="94" class="pv-worked">Impact</div>
-            <div data-i="210" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>20% More users followed up to join Premium</div>
+            <div data-i="210" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>+20% Premium sign-ups in the first month (vs. ~5% monthly before)</div>
             <div data-i="211" class="pv-impact-item"><span class="pv-impact-ic">&#8599;</span>17% Increase in Premium Reseller interest in 3 months</div>
           </div>
         </div>
@@ -1763,10 +1829,23 @@
       </div>
     </div>
 
+    <div class="ai-wf">
+      <div data-i="510" class="pv-label">AI in my workflow</div>
+      <h2 data-i="511">How I use AI in my workflow</h2>
+      <p data-i="512">I build these apps with Claude and Claude Code. AI does the making: code, assets, and first drafts of copy. I own the problem, the flow, and every decision, and I review all of it before it ships.</p>
+      <div class="ai-grid">
+        <div class="ai-card reveal"><div class="ai-top"><span class="ai-n">01</span><h3 data-i="517">Build and ship</h3></div><p data-i="518">I go from the first layout to a live site with Claude Code: screens, interactions, responsive layouts, and deployment.</p><p class="ai-me" data-i="540"><b>My part:</b> the problem, the user flow, and testing the build on real devices.</p><div class="vc-facts"><span data-i="519">2 live apps</span><span data-i="541">Claude Code</span></div></div>
+        <div class="ai-card reveal"><div class="ai-top"><span class="ai-n">02</span><h3 data-i="522">Visual assets</h3></div><p data-i="523">Every illustration, icon, and decorative graphic in these apps is made with AI, styled to fit each product.</p><p class="ai-me" data-i="542"><b>My part:</b> art direction, consistency across screens, and choosing what goes in.</p><div class="vc-facts"><span data-i="524">Illustrations</span><span data-i="525">Icons &amp; graphics</span><span data-i="543">100% AI-made</span></div></div>
+        <div class="ai-card reveal"><div class="ai-top"><span class="ai-n">03</span><h3 data-i="527">Copy &amp; flow</h3></div><p data-i="528">Claude drafts the product copy: headlines, onboarding steps, empty states, and result explanations, in Indonesian for local users.</p><p class="ai-me" data-i="544"><b>My part:</b> I review every line of copy and every flow for tone, clarity, and accuracy.</p><div class="vc-facts"><span data-i="529">UX copy</span><span data-i="530">Indonesian &amp; English</span></div></div>
+        <div class="ai-card reveal"><div class="ai-top"><span class="ai-n">04</span><h3 data-i="532">Beyond side projects</h3></div><p data-i="533">I use the same setup on my own portfolio with Claude Code: English and Indonesian versions, sharp rebuilds of product widgets, and hiding confidential figures on work screens before they go public.</p><p class="ai-me" data-i="545"><b>My part:</b> deciding what is safe to show and checking every page.</p><div class="vc-facts"><span data-i="534">EN / ID</span><span data-i="535">Confidential data hidden</span></div></div>
+      </div>
+    </div>
+
     <div class="vc-proj">
       <div class="vc-text">
         <div data-i="81" class="pv-label">Project 01</div>
         <h2>Wordly</h2>
+        <div class="vc-ai"><span data-i="546">Built with Claude</span><span data-i="547">Code</span><span data-i="548">Assets</span><span data-i="549">Copy</span></div>
         <p data-i="487">Many people learn English words by reading a list, then forget them the next day. Reading alone does not build recall.</p>
         <p data-i="488">Wordly turns every word into three steps: memorise it with its meaning and pronunciation, write it from the Indonesian meaning, then say it out loud into the microphone. Grammar lessons come with exercises, and test history stays on the device.</p>
         <div class="vc-facts"><span data-i="489">487 words</span><span data-i="490">18 everyday topics</span><span data-i="491">28 grammar lessons</span></div>
@@ -1785,6 +1864,7 @@
       <div class="vc-text">
         <div data-i="101" class="pv-label">Project 02</div>
         <h2>Selarasa</h2>
+        <div class="vc-ai"><span data-i="546">Built with Claude</span><span data-i="547">Code</span><span data-i="548">Assets</span><span data-i="549">Copy</span></div>
         <p data-i="493">Choosing colours for clothes, makeup, and hijab is often guesswork, and a personal colour analysis session costs time and money.</p>
         <p data-i="494">Selarasa gives a first answer in a minute. Scan your face or upload a photo, and it suggests your colour season, ten clothing colours, makeup and hijab shades, and colours to avoid, with a five-trait colour profile. It also suggests haircuts and hair colours, and turns everything into a detailed report you can print or save as PDF. The photo is processed on the device.</p>
         <div class="vc-facts"><span data-i="495">AI face scan</span><span data-i="496">Processed on device</span><span data-i="497">Makeup &amp; hijab colours</span><span data-i="499">Printable report</span></div>
@@ -1803,7 +1883,7 @@
 
 <footer class="ft">
   <div class="wrap ft-grid">
-    <div class="ft-id"><i class="ft-dot" aria-hidden="true"></i><div>SITI ZULIATUL FAIDAH<br><span data-i="500">PRODUCT DESIGNER</span><br>JAKARTA, ID<br><span id="ftTime">--:-- GMT+7</span></div></div>
+    <div class="ft-id"><i class="ft-dot" aria-hidden="true"></i><div>SITI ZULIATUL FAIDAH<br><span data-i="500">PRODUCT DESIGNER</span><br>JAKARTA, ID<br><span id="ftTime">GMT+7</span></div></div>
     <nav class="ft-col" aria-label="Profiles"><a class="ft-row" href="https://www.linkedin.com/in/siti-zuliatul-faidah/" target="_blank" rel="noopener"><span>LinkedIn</span><i aria-hidden="true">&#8599;</i></a><a class="ft-row" href="https://dribbble.com/sitizuliatulf" target="_blank" rel="noopener"><span>Dribbble</span><i aria-hidden="true">&#8599;</i></a><a class="ft-row" href="https://www.behance.net/sitizuliatulfaidah" target="_blank" rel="noopener"><span>Behance</span><i aria-hidden="true">&#8599;</i></a></nav>
     <div class="ft-copy">&copy; 2026 Siti Zuliatul Faidah</div>
   </div>
@@ -1956,8 +2036,38 @@
       });
     });
   });
-  window.addEventListener('hashchange', route);
-  route();
+  var VIEW_IDS = ['projectView','paylaterView','project2View','project3View','vibeView','landingQubiqlView','landingQubioView','landingMenuView','experienceView'];
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var routeBar = document.createElement('div'); routeBar.className = 'route-bar'; document.body.appendChild(routeBar);
+  var lastCard = null, returning = false, firstRoute = true;
+  function replay(el, cls){ el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+  function afterRoute(){
+    if(firstRoute){ firstRoute = false; return; }
+    if(reduceMotion) return;
+    replay(routeBar, 'go');
+    var shown = null;
+    VIEW_IDS.forEach(function(id){ var v = document.getElementById(id); if(v && v.style.display !== 'none'){ shown = v; } });
+    if(shown){ replay(shown, 'view-in'); }
+    else {
+      replay(homeView, 'home-in');
+      if(returning && lastCard){ var c = lastCard; var go = function(){ window.scrollTo({top: c.getBoundingClientRect().top + window.pageYOffset - 96, behavior: 'instant'}); }; setTimeout(go, 0); setTimeout(go, 150); }
+    }
+    returning = false;
+  }
+  document.addEventListener('click', function(e){
+    var back = e.target.closest && e.target.closest('.back-link');
+    if(back){ returning = true; return; }
+    var card = e.target.closest && e.target.closest('a.project-showcase[href^="#"]');
+    if(!card || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    lastCard = card;
+    if(reduceMotion) return;
+    e.preventDefault();
+    card.classList.add('is-opening');
+    var href = card.getAttribute('href');
+    setTimeout(function(){ card.classList.remove('is-opening'); location.hash = href; }, 180);
+  });
+  window.addEventListener('hashchange', function(){ route(); afterRoute(); });
+  route(); afterRoute();
   updateStep();
   matchShotHeight();
 
@@ -2295,23 +2405,10 @@
   }, {threshold:0.6}).observe(box);
 })();
 </script>
-<script>
-(function(){
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.wk-tabs [data-wk]'));
-  var panels = Array.prototype.slice.call(document.querySelectorAll('[data-wk-panel]'));
-  tabs.forEach(function(t){
-    t.addEventListener('click', function(){
-      var k = t.getAttribute('data-wk');
-      tabs.forEach(function(b){ var on = b === t; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
-      panels.forEach(function(p){ p.hidden = p.getAttribute('data-wk-panel') !== k; });
-    });
-  });
-})();
-</script>
 <script src="i18n.js"></script>
 <script>
 (function(){var el=document.getElementById('ftTime'); if(!el) return;
-function tick(){try{el.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Jakarta'}).format(new Date())+' GMT+7';}catch(e){}}
+function tick(){var d=new Date(Date.now()+7*3600000),p=function(n){return (n<10?'0':'')+n;};el.textContent=p(d.getUTCHours())+':'+p(d.getUTCMinutes())+' GMT+7';}
 tick(); setInterval(tick,30000);})();
 </script>
 </body>
