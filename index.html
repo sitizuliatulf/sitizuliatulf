@@ -567,6 +567,30 @@
   .back-link{transition:transform .2s ease, box-shadow .2s ease;}
   .back-link:hover{transform:translateX(-4px);}
   @media (prefers-reduced-motion: reduce){ .route-bar,.view-in *,.home-in{animation:none !important;} .project-showcase.is-opening{transform:none !important;} }
+  .dd-card .dd-desc.dd-sec + .dd-desc.dd-sec{margin-top:16px !important;}
+  .dd-card .dd-sec strong{display:block; margin-bottom:4px; font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--accent);}
+
+  .pv-impact-note{margin:10px 2px 0; font-size:13px; color:var(--muted);}
+  .pv-quote{margin:18px 0 0; padding:14px 18px; border-left:3px solid var(--accent); background:#fff8f4; border-radius:0 14px 14px 0;}
+  .pv-quote span{display:block; font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:4px;}
+  .pv-quote p{margin:0; font-size:14px; line-height:1.6; color:var(--ink);}
+
+  .why-sec{margin:40px 0 48px;}
+  .why-sec .pv-worked{margin-top:0;}
+  .why-title{margin:4px 0 22px; font-size:clamp(26px,2.8vw,32px); font-weight:800; letter-spacing:-.01em; line-height:1.3; color:var(--ink);}
+
+  .why-list{margin:0; padding-left:20px; display:grid; gap:6px; font-size:16px; line-height:1.55; color:var(--ink);}
+  .why-list li::marker{color:var(--accent);}
+  .why-list strong{font-weight:700;}
+
+  .why-steps{list-style:none; margin:6px 0 0; padding:0; display:flex; flex-direction:column; gap:26px;}
+  .why-steps .ws{position:relative;}
+  .why-steps .ws:not(:last-child)::after{content:""; position:absolute; left:16px; top:40px; bottom:-26px; width:2px; background:linear-gradient(var(--accent),#ffd6c2);}
+  .ws-head{display:flex; align-items:center; gap:16px;}
+  .ws-num{position:relative; z-index:1; flex-shrink:0; width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg,#ff7a4d,var(--accent)); color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 6px #ffe3d6;}
+  .ws-title{font-size:17px; font-weight:800; letter-spacing:-.01em; line-height:1.2; color:var(--ink);}
+  .ws-body{padding:10px 0 0 50px;}
+  @media (max-width:720px){ .ws-title{font-size:16px;} .ws-body{padding-left:50px;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -1049,7 +1073,7 @@
         <div class="pt-head-main">
           <div class="pt-eyebrow"><span class="pt-num">05</span><span data-i="472" class="pt-lab">Side projects &middot; Built with AI</span><i class="pt-line"></i></div>
           <div data-i="473" class="pt-h">Vibe-coded Apps</div>
-          <p data-i="474" class="pt-d">Exercising product and design thinking beyond the canvas: two consumer web apps I designed and built end to end with AI, including how I use AI in my workflow. Both are live.</p>
+          <p data-i="474" class="pt-d">Wordly and Selarasa: live apps I took from idea to launch on my own, as product owner and designer, with AI coding tools handling the development.</p>
         </div>
         <div class="pt-meta">
           <div class="pt-meta-item"><span data-i="475" class="pt-meta-lab">Type</span><span data-i="476" class="pt-meta-val">Web app &middot; Consumers</span></div>
@@ -1198,6 +1222,11 @@
         <h2 data-i="82" class="pv-project-title reveal">Simplifying Route Planning &amp; Navigation</h2>
         <p data-i="83" class="pv-text reveal">Couriers on <strong>Lion Parcel’s Driver App</strong> manage multiple stops per route, but the app only showed basic shipment details—not a <strong>clear overview of their route</strong>.</p>
         <p data-i="84" class="pv-text reveal">Drivers relied on <strong>Google Maps</strong> instead, <strong>manually copying customer addresses</strong> one by one to decide their next stop.</p>
+        <div class="why-sec reveal">
+          <div data-i="550" class="pv-worked">Why we built this</div>
+          <h3 data-i="551" class="why-title">Fix the address first, then the route</h3>
+          <ol class="why-steps"><li class="ws"><div class="ws-head"><span class="ws-num"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span data-i="553l" class="ws-title">What the data showed</span></div><div class="ws-body"><ul class="why-list"><li data-i="553a">POS (partner drop-off points) were missing their daily pickup and delivery targets</li><li data-i="553b">Weekly retail and operations reports, compiled by the product manager, traced most courier-cancelled pickups (<strong>7.6%</strong>) to couriers not finding the address</li><li data-i="553c">Addresses customers typed didn&rsquo;t match the real location, and map pins were wrong or empty</li><li data-i="553d">&ldquo;Address not found&rdquo; stood at <strong>2.5%</strong></li></ul></div></li><li class="ws"><div class="ws-head"><span class="ws-num"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i="555l" class="ws-title">What we decided</span></div><div class="ws-body"><ul class="why-list"><li data-i="555b">An in-app map with route recommendations, so couriers no longer switch to Google Maps</li><li data-i="555c">Couriers drop and save the correct pin, so the next order from that customer already has the right coordinates</li></ul></div></li></ol>
+        </div>
         <div class="pv-sticky">
         <div data-i="85" class="pv-meta-label pv-worked">What I worked on</div>
         <ol class="pv-stepper">
@@ -1215,15 +1244,12 @@
           </li>
         </ol>
         <p data-i="93" class="pv-text reveal">Together, these improvements created a more connected route experience—from understanding the route to choosing the next stop and navigating to the destination.</p>
-        <div class="dd-card reveal">
-            <span data-i="550" class="dd-badge"><i></i>Data behind the decision</span>
-            <h3 data-i="551" class="dd-title">Fix the address first, then the route</h3>
-            <p data-i="552" class="dd-desc">Operations flagged that many POS were missing their daily pickup and delivery targets, which differ by location, from a handful of packages to 20 or more. Their weekly reports kept pointing to the same cause: &ldquo;address not found&rdquo; at 2.5%, with couriers reporting that the address customers entered did not match the real location. So I focused the redesign on finding the address, not only on ordering stops. Against a 1.5% target, &ldquo;address not found&rdquo; dropped to 1.32% after launch.</p>
-          </div>
         <div class="pv-impact reveal">
           <div data-i="94" class="pv-worked">Impact</div>
           <div data-i="95" class="pv-impact-item"><span class="pv-impact-ic">↗</span>Reduced &ldquo;address not found&rdquo; cases from 2.5% to 1.32% (target 1.50%)</div>
           <div data-i="96" class="pv-impact-item"><span class="pv-impact-ic">↗</span>Lowered courier-cancelled pickups from 7.6% to 4.8% (target 7%)</div>
+          <p data-i="556" class="pv-impact-note">Tracked for one quarter after launch.</p>
+          <blockquote class="pv-quote"><span data-i="557l">What couriers said</span><p data-i="557">New couriers completed more deliveries knowing the route upfront. Some experienced couriers kept using Google Maps at first.</p></blockquote>
         </div>
         </div>
       </div>
@@ -1817,14 +1843,14 @@
   <div class="pv-topbar wrap"><a data-i="154" href="#top" class="back-link">&larr; Back</a></div>
   <div class="wrap">
     <div data-i="473" class="pv-label">Vibe-coded Apps</div>
-    <h1 data-i="482" class="pv-title">Exercising product and design thinking beyond the canvas</h1>
+    <h1 data-i="482" class="pv-title">Tools I built with AI</h1>
     <div class="pv-grid">
       <div class="pv-col-main">
         <div data-i="483" class="pv-meta-label">Background</div>
-        <p data-i="484" class="pv-text">Vibe coding is how I practise product and design thinking outside Figma. I pick an everyday problem, design the experience, and build it myself with AI until it is live and usable by real people. Shipping it myself keeps me honest about what works in a real browser, not just on a canvas.</p>
+        <p data-i="484" class="pv-text">Wordly and Selarasa are live apps I took from idea to launch on my own. I acted as the product owner and designer: I defined the problem, the features, and the user flows, and designed the experience. AI coding tools handled the development, which let me ship working products without a dedicated engineering team.</p>
       </div>
       <div class="pv-col-side">
-        <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="485" class="pv-text">Product Designer &amp; AI builder</div></div>
+        <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="485" class="pv-text">Product owner &amp; designer</div></div>
         <div class="pv-block"><div data-i="24" class="pv-meta-label">Industry</div><div data-i="486" class="pv-text">Consumer apps &middot; Edtech, Beauty</div></div>
       </div>
     </div>
@@ -1832,7 +1858,7 @@
     <div class="ai-wf">
       <div data-i="510" class="pv-label">AI in my workflow</div>
       <h2 data-i="511">How I use AI in my workflow</h2>
-      <p data-i="512">I build these apps with Claude and Claude Code. AI does the making: code, assets, and first drafts of copy. I own the problem, the flow, and every decision, and I review all of it before it ships.</p>
+      <p data-i="512">Here is how the work split between me and AI on these apps. AI handled the making: code, assets, and first drafts of copy. I owned the decisions and reviewed everything before it shipped.</p>
       <div class="ai-grid">
         <div class="ai-card reveal"><div class="ai-top"><span class="ai-n">01</span><h3 data-i="517">Build and ship</h3></div><p data-i="518">I go from the first layout to a live site with Claude Code: screens, interactions, responsive layouts, and deployment.</p><p class="ai-me" data-i="540"><b>My part:</b> the problem, the user flow, and testing the build on real devices.</p><div class="vc-facts"><span data-i="519">2 live apps</span><span data-i="541">Claude Code</span></div></div>
         <div class="ai-card reveal"><div class="ai-top"><span class="ai-n">02</span><h3 data-i="522">Visual assets</h3></div><p data-i="523">Every illustration, icon, and decorative graphic in these apps is made with AI, styled to fit each product.</p><p class="ai-me" data-i="542"><b>My part:</b> art direction, consistency across screens, and choosing what goes in.</p><div class="vc-facts"><span data-i="524">Illustrations</span><span data-i="525">Icons &amp; graphics</span><span data-i="543">100% AI-made</span></div></div>
@@ -1847,12 +1873,12 @@
         <h2>Wordly</h2>
         <div class="vc-ai"><span data-i="546">Built with Claude</span><span data-i="547">Code</span><span data-i="548">Assets</span><span data-i="549">Copy</span></div>
         <p data-i="487">Many people learn English words by reading a list, then forget them the next day. Reading alone does not build recall.</p>
-        <p data-i="488">Wordly turns every word into three steps: memorise it with its meaning and pronunciation, write it from the Indonesian meaning, then say it out loud into the microphone. Grammar lessons come with exercises, and test history stays on the device.</p>
+        <p data-i="488">Wordly is an English vocabulary app for learners of all ages. It helps users memorize words through speaking, reading, writing, and grammar, and keeps a record of what each learner has practiced, so parents or teachers can track daily progress.</p>
         <div class="vc-facts"><span data-i="489">487 words</span><span data-i="490">18 everyday topics</span><span data-i="491">28 grammar lessons</span></div>
         <a class="vc-live" href="https://wordly-belajar.netlify.app/" target="_blank" rel="noopener"><span data-i="492">Visit live site</span> &#8599;</a>
       </div>
       <div class="vc-media">
-        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vibe-wordly.webp" width="2560" height="1600" loading="lazy" alt="Wordly home: memorise, write, then speak"></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vibe-wordly.webp" width="2560" height="1600" loading="lazy" alt="Wordly home: memorize, write, then speak"></div></div>
         <div class="vc-two"><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-topics.webp" width="2560" height="1500" loading="lazy" alt="Wordly topic picker with illustrated topics"></div></div><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-list.webp" width="2560" height="1500" loading="lazy" alt="Wordly word list with meaning, pronunciation, and writing practice"></div></div></div>
         <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-grammar.webp" width="2560" height="1600" loading="lazy" alt="Wordly grammar lessons by level"></div></div>
         <div class="vc-two"><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-test.webp" width="2560" height="1500" loading="lazy" alt="Wordly test onboarding asking for the learner name"></div></div><div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-wordly-history.webp" width="2560" height="1500" loading="lazy" alt="Wordly test history stored on the device"></div></div></div>
@@ -1865,17 +1891,17 @@
         <div data-i="101" class="pv-label">Project 02</div>
         <h2>Selarasa</h2>
         <div class="vc-ai"><span data-i="546">Built with Claude</span><span data-i="547">Code</span><span data-i="548">Assets</span><span data-i="549">Copy</span></div>
-        <p data-i="493">Choosing colours for clothes, makeup, and hijab is often guesswork, and a personal colour analysis session costs time and money.</p>
-        <p data-i="494">Selarasa gives a first answer in a minute. Scan your face or upload a photo, and it suggests your colour season, ten clothing colours, makeup and hijab shades, and colours to avoid, with a five-trait colour profile. It also suggests haircuts and hair colours, and turns everything into a detailed report you can print or save as PDF. The photo is processed on the device.</p>
-        <div class="vc-facts"><span data-i="495">AI face scan</span><span data-i="496">Processed on device</span><span data-i="497">Makeup &amp; hijab colours</span><span data-i="499">Printable report</span></div>
+        <p data-i="493">Choosing colors for clothes, makeup, and hijab is often guesswork, and a personal color analysis session costs time and money.</p>
+        <p data-i="494">Selarasa is a personal color analysis app that helps users find the colors that suit them, so they can shop with more confidence and feel good about how they look. Scan your face or upload a photo to get your color season, clothing, makeup, and hijab colors, hair suggestions, and a printable report. The photo is processed on the device.</p>
+        <div class="vc-facts"><span data-i="495">AI face scan</span><span data-i="496">Processed on device</span><span data-i="497">Makeup &amp; hijab colors</span><span data-i="499">Printable report</span></div>
         <a class="vc-live" href="https://selarasa.netlify.app/" target="_blank" rel="noopener"><span data-i="492">Visit live site</span> &#8599;</a>
       </div>
       <div class="vc-media">
-        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-scan.webp" width="2000" height="967" loading="lazy" alt="Selarasa result: Light Spring season with a five-trait colour profile"></div></div>
-        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-colors.webp" width="2000" height="959" loading="lazy" alt="Selarasa: features read from the face and the colours to wear or avoid"></div></div>
-        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-hair.webp" width="2000" height="959" loading="lazy" alt="Selarasa: haircut and hair colour suggestions for the face shape"></div></div>
-        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-report.webp" width="2000" height="969" loading="lazy" alt="Selarasa detailed colour report"></div></div>
-        <div class="vc-shot reveal" style="padding:0;"><span data-i="498" class="vc-cap">Printable PDF report</span><div class="vc-sheets"><img src="vc-selarasa-pdf-1.webp" width="2277" height="3206" loading="lazy" alt="Selarasa PDF report: colour report summary"><img src="vc-selarasa-pdf-2.webp" width="2277" height="3228" loading="lazy" alt="Selarasa PDF report: before and after colour guide"><img src="vc-selarasa-pdf-6.webp" width="2278" height="3228" loading="lazy" alt="Selarasa PDF report: best colour palette"></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-scan.webp" width="2000" height="967" loading="lazy" alt="Selarasa result: Light Spring season with a five-trait color profile"></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-colors.webp" width="2000" height="959" loading="lazy" alt="Selarasa: features read from the face and the colors to wear or avoid"></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-hair.webp" width="2000" height="959" loading="lazy" alt="Selarasa: haircut and hair color suggestions for the face shape"></div></div>
+        <div class="vc-shot reveal"><div class="vc-win"><i><b></b><b></b><b></b></i><img src="vc-selarasa-report.webp" width="2000" height="969" loading="lazy" alt="Selarasa detailed color report"></div></div>
+        <div class="vc-shot reveal" style="padding:0;"><span data-i="498" class="vc-cap">Printable PDF report</span><div class="vc-sheets"><img src="vc-selarasa-pdf-1.webp" width="2277" height="3206" loading="lazy" alt="Selarasa PDF report: color report summary"><img src="vc-selarasa-pdf-2.webp" width="2277" height="3228" loading="lazy" alt="Selarasa PDF report: before and after color guide"><img src="vc-selarasa-pdf-6.webp" width="2278" height="3228" loading="lazy" alt="Selarasa PDF report: best color palette"></div></div>
       </div>
     </div>
   </div>
