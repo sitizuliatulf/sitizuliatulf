@@ -591,6 +591,12 @@
   .ws-title{font-size:17px; font-weight:800; letter-spacing:-.01em; line-height:1.2; color:var(--ink);}
   .ws-body{padding:10px 0 0 50px;}
   @media (max-width:720px){ .ws-title{font-size:16px;} .ws-body{padding-left:50px;} }
+  .xp-sec-label{margin-top:88px;}
+  .xp-list.xp-list-sec{margin-top:20px;}
+
+  .cc-sec .cc-grid{display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:14px; margin-top:20px;}
+  .cc-sec .cc-note{margin-top:22px;}
+  @media (max-width:720px){ .cc-sec .cc-grid{grid-template-columns:1fr !important;} }
   .pv-shot-dummy{background:#F1F4FB; display:flex; align-items:center; justify-content:center; color:#b8aca2; font-size:15px; font-weight:600; letter-spacing:.04em;}
   .chat-phone{width:34%; background:#f8f4ef; border:6px solid #fff; border-bottom:none; border-radius:32px 32px 0 0; padding:18px 14px; height:100%;}
   .cp-brand{font-weight:800; font-size:13px; margin-bottom:18px;}
@@ -1225,7 +1231,7 @@
         <div class="why-sec reveal">
           <div data-i="550" class="pv-worked">Why we built this</div>
           <h3 data-i="551" class="why-title">Fix the address first, then the route</h3>
-          <ol class="why-steps"><li class="ws"><div class="ws-head"><span class="ws-num"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span data-i="553l" class="ws-title">What the data showed</span></div><div class="ws-body"><ul class="why-list"><li data-i="553a">POS (partner drop-off points) were missing their daily pickup and delivery targets</li><li data-i="553b">Weekly retail and operations reports, compiled by the product manager, traced most courier-cancelled pickups (<strong>7.6%</strong>) to couriers not finding the address</li><li data-i="553c">Addresses customers typed didn&rsquo;t match the real location, and map pins were wrong or empty</li><li data-i="553d">&ldquo;Address not found&rdquo; stood at <strong>2.5%</strong></li></ul></div></li><li class="ws"><div class="ws-head"><span class="ws-num"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i="555l" class="ws-title">What we decided</span></div><div class="ws-body"><ul class="why-list"><li data-i="555b">An in-app map with route recommendations, so couriers no longer switch to Google Maps</li><li data-i="555c">Couriers drop and save the correct pin, so the next order from that customer already has the right coordinates</li></ul></div></li></ol>
+          <ol class="why-steps"><li class="ws"><div class="ws-head"><span class="ws-num"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span data-i="553l" class="ws-title">What the data showed</span></div><div class="ws-body"><ul class="why-list"><li data-i="553a">POS (partner drop-off points) were missing their daily pickup and delivery targets</li><li data-i="553b">Couriers cancelled <strong>7.6%</strong> of all pickups. Weekly retail and operations reports, compiled by the product manager, traced most of those cancellations to couriers not finding the address</li><li data-i="553c">Addresses customers typed didn&rsquo;t match the real location, and map pins were wrong or empty</li><li data-i="553d">&ldquo;Address not found&rdquo; stood at <strong>2.5%</strong></li></ul></div></li><li class="ws"><div class="ws-head"><span class="ws-num"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i="555l" class="ws-title">What we decided</span></div><div class="ws-body"><ul class="why-list"><li data-i="555b">An in-app map with route recommendations, so couriers no longer switch to Google Maps</li><li data-i="555c">Couriers drop and save the correct pin, so the next order from that customer already has the right coordinates</li></ul></div></li></ol>
         </div>
         <div class="pv-sticky">
         <div data-i="85" class="pv-meta-label pv-worked">What I worked on</div>
@@ -1429,7 +1435,7 @@
   <div class="pv-topbar wrap"><a data-i="154" href="#top" class="back-link">&larr; Back</a></div>
   <section class="xp wrap">
     <div data-i="320" class="pv-label">Summary</div>
-    <p data-i="300" class="xp-intro">Hi, I&rsquo;m Siti Zuliatul Faidah, a Product Designer with 6+ years of design experience across full-time roles and client projects. I own complex digital products from research to production across logistics, fintech, e-commerce, and AI.</p>
+    <p data-i="300" class="xp-intro">Hi, I&rsquo;m Siti Zuliatul Faidah, a Product Designer with 6 years in product and UI/UX design: 4 years full-time (Lion Parcel, Desktop IP, Tokodistributor), plus freelance projects since 2020 alongside my earlier role as a network engineer. I own complex digital products from research to production across logistics, fintech, e-commerce, and AI.</p>
     <p data-i="301" class="xp-intro">I take products from zero to launch and redesign the flows where mistakes are costly. I make decisions from user research and testing, align product, engineering, and business teams around them, and build design systems that keep products consistent. With a background in network engineering, I bring a systems mindset and a shared language with engineers.</p>
     <div class="xp-list">
       <article class="xp-item">
@@ -1469,6 +1475,35 @@
             <li data-i="316">Grew premium reseller sign-ups 20% in the first month (vs. ~5% monthly before) with marketing banners, and designed a voucher system with internal configuration and approval</li>
             <li data-i="317">Designed supplier tools for product, brand, and stock management, plus reseller payment screens with pay-later</li>
             <li data-i="318">Built the design system with engineers, aligning tokens between design and code</li>
+          </ul>
+        </div>
+      </article>
+      <article class="xp-item">
+        <div data-i="580" class="xp-when">Apr 2020 &ndash; Present</div>
+        <div class="xp-body">
+          <h2 data-i="581" class="xp-role">Freelance UI/UX Designer</h2>
+          <div data-i="582" class="xp-co">Client projects <i class="dot-sep"></i> Web &amp; Mobile</div>
+          <p data-i="583" class="xp-desc">Client projects alongside my earlier role as a network engineer.</p>
+          <ul class="xp-points">
+            <li data-i="584"><strong>Mudda:</strong> bilingual Arabic-English rental app with RTL support</li>
+            <li data-i="585"><strong>DoneRight:</strong> B2B dashboards for restaurant operations</li>
+            <li data-i="586"><strong>Seelfa:</strong> merchant invoicing app</li>
+            <li data-i="587"><strong>VZO:</strong> restaurant management landing page</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div data-i="570" class="pv-label xp-sec-label">Mentoring</div>
+    <div class="xp-list xp-list-sec">
+      <article class="xp-item">
+        <div class="xp-when">2023</div>
+        <div class="xp-body">
+          <h2 data-i="571" class="xp-role">Product Design Mentor</h2>
+          <div class="xp-co">HackHerthon 2023 <i class="dot-sep"></i> Generation Girl</div>
+          <p data-i="572" class="xp-desc">Mentored five student teams of two to four people each.</p>
+          <ul class="xp-points">
+            <li data-i="573">Reviewed each team&rsquo;s challenge and gave feedback on the problem they chose, their proposed solution, its business case, its expected impact on users, and its strengths</li>
+            <li data-i="574">Guided them on the design side: what they measured and how to improve it</li>
           </ul>
         </div>
       </article>
@@ -1765,7 +1800,7 @@
         <div data-i="125" class="pv-meta-label">Overview</div>
         <p data-i="436" class="pv-text">Lion Parcel agents run small shipping counters and paid for every booking from a prepaid balance. The business wanted to let trusted agents book on a billing limit and pay later, without taking on bad debt.</p>
         <p data-i="437" class="pv-text pv-gap">I designed the pay-later experience from scratch: how agents see and use their limit, how bills and due dates are presented, and how the rules on discounts and late payments are made clear.</p>
-        <p data-i="462" class="pv-text pv-gap">This case study walks through the agent (POS) side first, then the internal tools the Lion Parcel team uses to run it.</p>
+        <p data-i="462" class="pv-text pv-gap">This case study walks through the agent (POS) side first, then the credit controls that kept bad debt at zero.</p>
       </div>
       <div class="pv-col-side">
         <div class="pv-block"><div data-i="77" class="pv-meta-label">Scope</div><div data-i="438" class="pv-text">Product Designer &middot; Agent web app (POS) &amp; internal tools</div></div>
@@ -1818,14 +1853,18 @@
         <p data-i="454" class="pl-note">Illustrative recreation. Real screens, figures, and terms are confidential.</p>
       </div>
     </div>
-    <div class="pv-project-intro" style="margin-top:-24px; margin-bottom:72px;">
-        <div data-i="463" class="pv-label">Internal side</div>
-        <h2 data-i="464" class="pv-project-title reveal">Tools for the Lion Parcel team</h2>
-        <p data-i="465" class="pv-text reveal">Pay later only works if the team can decide who gets credit, see who is using it, and follow up at the right time. I designed the internal side as well.</p>
-        <div class="p3-proc reveal" style="display:grid; gap:14px; margin-top:20px;">
-          <div class="p3-rc-item"><span class="p3-rc-n">01</span><div><strong data-i="466">Limit Setup</strong><p data-i="467">Gives each POS agent their starting limit. The criteria behind it are confidential, so they are not shown here.</p></div></div>
-          <div class="p3-rc-item"><span class="p3-rc-n">02</span><div><strong data-i="468">Pay-Later Monitoring</strong><p data-i="469">Shows which POS agents are using pay later and the status of their bills, so the team spots risk early.</p></div></div>
-          <div class="p3-rc-item"><span class="p3-rc-n">03</span><div><strong data-i="470">Follow-Up Access</strong><p data-i="471">Sets who on the team is allowed to follow up with each POS agent, so reminders come from the right person.</p></div></div>
+    <div class="pv-project-intro cc-sec" style="margin-top:-24px; margin-bottom:72px;">
+        <div data-i="463" class="pv-label">Credit controls</div>
+        <h2 data-i="464" class="pv-project-title reveal">Credit controls behind zero bad debt</h2>
+        <p data-i="465" class="pv-text reveal">Not every POS gets the same credit. The internal team reviews data from partner POS and assigns each one a different credit limit, through two paths:</p>
+        <div class="p3-proc p3-two reveal cc-grid">
+          <div class="p3-rc-item"><span class="p3-rc-n">01</span><div><strong data-i="466">Direct limit</strong><p data-i="467">The internal team assigns a credit limit, and the POS can use it right away without activating anything.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">02</span><div><strong data-i="468">Activation with approval</strong><p data-i="469">Operations offers a credit limit. The POS activates it and chooses its payment term, then operations reviews and approves the request before the POS can use it.</p></div></div>
+        </div>
+        <p data-i="590" class="pv-text reveal cc-note">Once approved, the POS can pay for shipment bookings on credit. If a bill passes its due date, pay later is frozen until the POS settles it in full.</p>
+        <div class="p3-proc p3-two reveal cc-grid">
+          <div class="p3-rc-item"><span class="p3-rc-n">&#9679;</span><div><strong data-i="591">For POS</strong><p data-i="592">The system records every use of the credit limit, shows exactly which shipment bills need to be paid, and sends reminders before the due date.</p></div></div>
+          <div class="p3-rc-item"><span class="p3-rc-n">&#9679;</span><div><strong data-i="470">For the operations team</strong><p data-i="471">A dashboard tracks every POS&rsquo;s limit and outstanding bills, lets the team raise a limit when a POS meets the terms and conditions, and sets who follows up with each POS.</p></div></div>
         </div>
     </div>
     <div class="p3-outcome">
